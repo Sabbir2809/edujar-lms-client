@@ -1,7 +1,12 @@
+import Navbar from "../components/Navbar.jsx";
+
 const Home = () => {
+
   return (
-    <div>
-      <h1>Edujar</h1>
+    <div className=''>
+
+      <Navbar />
+
     </div>
   );
 };
