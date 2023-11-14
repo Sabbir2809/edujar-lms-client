@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar.jsx";
+import Landing from "../components/Landing.jsx";
 
 const Home = () => {
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div className=''>
 
       <Navbar />
+        <Landing />
 
     </div>
   );
