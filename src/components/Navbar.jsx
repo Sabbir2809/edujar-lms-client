@@ -58,7 +58,7 @@ const Navbar1 = () => {
 
 
                 <div>
-                    <ul className=' nav2  items-center lg:gap-6 md:gap-2  md: text-[15px] lg:text-[16px] font-[1000] text-black hidden md:flex' style={{fontFamily: "Saira",}}>
+                    <ul className=' nav2  items-center font-medium lg:gap-6 md:gap-2  md: text-[15px] lg:text-[16px] font-[1000] text-black hidden md:flex'  style={{fontFamily: "Saira",}}>
                         <li>Home</li>
                         <div className='dropdown dropdown-hover dropdown-end'>
                             <label className="btn btn-ghost" tabIndex={0}>
