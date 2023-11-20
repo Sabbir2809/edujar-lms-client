@@ -1,12 +1,9 @@
 import Navbar from "../components/Navbar.jsx";
 
 const Home = () => {
-
   return (
-    <div className=''>
-
+    <div className="">
       <Navbar />
-
     </div>
   );
 };
