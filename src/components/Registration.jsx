@@ -1,6 +1,6 @@
 import Url from "../styles/assets/RegistrationBG.jpg"
 import { Label ,TextInput,Button} from "keep-react";
-import { Envelope,EyeSlash, Lock } from "phosphor-react";
+import {Envelope, EyeSlash, Lock, IdentificationBadge, SimCard} from "phosphor-react";
 function Registration() {
     return (
         <div className="relative h-screen flex items-center justify-center px-10">
@@ -23,7 +23,7 @@ function Registration() {
                         <TextInput
                             placeholder="Name"
                             color="gray"
-                            addon={<Lock size={20} color="#5E718D" />}
+                            addon={<IdentificationBadge size={20} color="#5E718D" />}
                             addonPosition="left"
                         />
                         <br/>
@@ -36,7 +36,15 @@ function Registration() {
                         />
                         <br/>
                         <TextInput
-                            placeholder="example@gmail.com"
+                            placeholder="Mobile No"
+                            color="gray"
+                            sizing="md"
+                            addon={<SimCard size={20} color="#5E718D" />}
+                            addonPosition="left"
+                        />
+                        <br/>
+                        <TextInput
+                            placeholder="password"
                             color="gray"
                             sizing="md"
                             type="password"
