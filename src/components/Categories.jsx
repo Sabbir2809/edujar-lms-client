@@ -10,7 +10,7 @@ const Categories = () => {
         </h1>
         <p className="font-bold">12,000+ unique online course list designs</p>
       </div>
-      <div className="grid flex justify-center grid-cols-1 md:grid-cols-6 lg:grid-cols-6 gap-4 px-5 md:px-20 my-10 md:py-8">
+      <div className="grid flex justify-center grid-cols-2 md:grid-cols-6 lg:grid-cols-6 gap-4 px-5 md:px-20 my-10 md:py-8">
         <Card className="w-full p-4 hover:border-green-300">
           <Card.Container className="flex items-center justify-center">
             <Notification className="bg-green-500 text-slate-50 p-4 rounded" size={60} />
