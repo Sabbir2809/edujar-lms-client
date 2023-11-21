@@ -1,33 +1,21 @@
-<<<<<<< HEAD
-import Navbar from "../components/Navbar.jsx";
 import CategoriesPage from "./CategoriesPage.jsx";
-=======
 import Card from "../components/Card.jsx";
-import Categories from "../components/Categories.jsx";
 import Landing from "../components/Landing.jsx";
 import MainLayout from "../components/MainLayout.jsx";
 import SectionLast from "../components/SectionLast.jsx";
 import WhyLearn from "../components/WhyLearn.jsx";
-
->>>>>>> 950c259c0fb317cfbbc88f42e3f96e655e1e0d1f
+import TestimonialSlide from "../components/TestimonialSlide.jsx";
 const Home = () => {
   return (
-<<<<<<< HEAD
-    <div className=''>
-
-      <Navbar />
-    <CategoriesPage/>
-    </div>
-=======
     <MainLayout>
       <Landing />
       <Card />
+        <CategoriesPage/>
       <WhyLearn />
-      <Categories />
       <SectionLast />
+        <TestimonialSlide/>
     </MainLayout>
->>>>>>> 950c259c0fb317cfbbc88f42e3f96e655e1e0d1f
-  );
+  )
 };
 
 export default Home;
