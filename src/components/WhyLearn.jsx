@@ -60,32 +60,6 @@ const WhyLearn = () => {
               ut labore veniam...
             </p>
           </div>
-
-          {/*<div className="pl-52 pt-20 w-[500px] h-[300px]">*/}
-          {/*  <img className="w-[80px] h-[80px] ml-28" src={wl2} alt="" />*/}
-          {/*  <h1*/}
-          {/*    className="text-white font-semibold text-2xl pt-5 tracking-wide text-center"*/}
-          {/*    style={{ fontFamily: "Rowdies" }}>*/}
-          {/*    02. Greduate*/}
-          {/*  </h1>*/}
-          {/*  <p className="text-white font-light text-[14px] pt-5 text-center" style={{ fontFamily: "Saira" }}>*/}
-          {/*    Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed doeiusmod <br /> temporidunt*/}
-          {/*    ut labore veniam...*/}
-          {/*  </p>*/}
-          {/*</div>*/}
-
-          {/*<div className="pl-52 pt-20 w-[500px] h-[300px]">*/}
-          {/*  <img className="w-[80px] h-[80px] ml-28" src={wl3} alt="" />*/}
-          {/*  <h1*/}
-          {/*    className="text-white font-semibold text-2xl pt-5 tracking-wide text-center"*/}
-          {/*    style={{ fontFamily: "Rowdies" }}>*/}
-          {/*    03. Work*/}
-          {/*  </h1>*/}
-          {/*  <p className="text-white font-light text-[14px] pt-5 text-center" style={{ fontFamily: "Saira" }}>*/}
-          {/*    Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed doeiusmod <br /> temporidunt*/}
-          {/*    ut labore veniam...*/}
-          {/*  </p>*/}
-          {/*</div>*/}
         </div>
       </div>
     </div>
