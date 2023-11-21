@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-const Navbar = () => {
-  return (
-    <div>
-      {/*Logo And Name*/}
-      <div className="w-full h-[66px] bg-white pl-36 pr-36 flex items-center justify-between">
-        <div className="nav1 flex items-center gap-4 ">
-          <img className="w-[40px] h-[60px]" src="./src/styles/assets/Frame.svg" />
-          <h1 className="text-1xl font-bold text-black " style={{ fontFamily: "Revalia", color: "#04016C" }}>
-            EDU<span style={{ color: "#2AAA94" }}>JAR</span>
-          </h1>
-        </div>
-        {/*List Item*/}
-        <div>
-          <ul
-            className=" nav2 flex items-center gap-6 text-[16px] font-[1000] text-black"
-=======
 import logo from "./../assets/Frame.svg";
 import Icon1 from "./../assets/Icon1.svg";
 import Icon2 from "./../assets/Icon2.svg";
@@ -104,16 +87,11 @@ const Navbar1 = () => {
         <div>
           <ul
             className=" nav2  items-center font-medium lg:gap-6 md:gap-2  md: text-[15px] lg:text-[16px] font-[1000] text-black hidden md:flex"
->>>>>>> 950c259c0fb317cfbbc88f42e3f96e655e1e0d1f
             style={{ fontFamily: "Saira" }}>
             <li>Home</li>
             <div className="dropdown dropdown-hover dropdown-end">
               <label className="btn btn-ghost" tabIndex={0}>
-<<<<<<< HEAD
-                <li className="font-bold text-black text-[16px] "> Courses</li>
-=======
                 <li className="text-black text-[16px] "> Courses</li>
->>>>>>> 950c259c0fb317cfbbc88f42e3f96e655e1e0d1f
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
                   <path
                     d="M10.0238 0.735L9.5175 0.22875C9.45 0.16125 9.37125 0.1275 9.28125 0.1275C9.19125 0.1275 9.1125 0.16125 9.045 0.22875L5.0625 4.21125L1.08 0.22875C1.0125 0.16125 0.93375 0.1275 0.84375 0.1275C0.75375 0.1275 0.675 0.16125 0.6075 0.22875L0.10125 0.735C0.03375 0.8025 0 0.875625 0 0.954375C0 1.03312 0.03375 1.10625 0.10125 1.17375L4.82625 5.89875C4.89375 5.96625 4.9725 6 5.0625 6C5.1525 6 5.23125 5.96625 5.29875 5.89875L10.0238 1.17375C10.0913 1.10625 10.125 1.03312 10.125 0.954375C10.125 0.875625 10.0913 0.8025 10.0238 0.735Z"
@@ -139,21 +117,6 @@ const Navbar1 = () => {
               </ul>
             </div>
             <li>Blog</li>
-<<<<<<< HEAD
-            <li>Contact</li>
-          </ul>
-        </div>
-
-        {/*Image*/}
-        <div className="flex items-center gap-6">
-          <img src="./src/styles/assets/Icon.svg" />
-          <img src="./src/styles/assets/Icon (1).svg" />
-          <img src="./src/styles/assets/Icon (2).svg" />
-        </div>
-
-        {/*Login / Register*/}
-        <div className="flex gap-5 ">
-=======
             <li>Shop</li>
             <li>Pages</li>
             <li>Events</li>
@@ -168,16 +131,11 @@ const Navbar1 = () => {
 
         {/*Login / Register*/}
         <div className="flex md:gap-5 gap-2">
->>>>>>> 950c259c0fb317cfbbc88f42e3f96e655e1e0d1f
           <button className="text-black font-bold hover:text-[#2AAA94]" style={{ fontFamily: "Saira" }}>
             Login
           </button>
           <button
-<<<<<<< HEAD
-            className=" btn1 text-white font-semibold w-[108px] h-[44px] text-[15px] hover:text-[#2AAA94]"
-=======
             className=" btn1 text-white font-semibold w-20 h-8 md:mr-0 mr-3 md:w-[105px] md:h-[44px] text-[15px] hover:text-[#2AAA94]"
->>>>>>> 950c259c0fb317cfbbc88f42e3f96e655e1e0d1f
             style={{ fontFamily: "Saira" }}
             type="submit">
             Register
@@ -188,8 +146,4 @@ const Navbar1 = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Navbar;
-=======
 export default Navbar1;
->>>>>>> 950c259c0fb317cfbbc88f42e3f96e655e1e0d1f

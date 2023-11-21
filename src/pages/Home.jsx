@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import Navbar from "../components/Navbar.jsx";
-
-const Home = () => {
-  return (
-    <div className="">
-      <Navbar />
-    </div>
-=======
 import Card from "../components/Card.jsx";
 import Categories from "../components/Categories.jsx";
 import Landing from "../components/Landing.jsx";
@@ -23,7 +14,6 @@ const Home = () => {
       <Categories />
       <SectionLast />
     </MainLayout>
->>>>>>> 950c259c0fb317cfbbc88f42e3f96e655e1e0d1f
   );
 };
 
