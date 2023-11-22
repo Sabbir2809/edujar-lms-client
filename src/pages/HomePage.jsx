@@ -3,9 +3,10 @@ import Categories from "../components/Categories.jsx";
 import Landing from "../components/Landing.jsx";
 import MainLayout from "../components/MainLayout.jsx";
 import SectionLast from "../components/SectionLast.jsx";
+import TestimonialSlide from "../components/TestimonialSlide.jsx";
 import WhyLearn from "../components/WhyLearn.jsx";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <MainLayout>
       <Landing />
@@ -13,8 +14,9 @@ const Home = () => {
       <WhyLearn />
       <Categories />
       <SectionLast />
+      <TestimonialSlide />
     </MainLayout>
   );
 };
 
-export default Home;
+export default HomePage;
