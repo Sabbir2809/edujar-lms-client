@@ -39,3 +39,41 @@ body {
   border-radius: 9px;
   padding: 10px 40px 10px 38px;
 }
+.video_layout{
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 50px;
+}
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+  .video_layout{
+    grid-template-columns: 1fr;
+    padding: 5px 10px;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+/*x-large devices (dekstops,1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+}
+
+/*Extra extra  large devices (larges desktops, 1200px and up)*/
+@media (min-width: 1400px) {
+
+}
