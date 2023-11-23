@@ -4,22 +4,22 @@ import Vector from "./../assets/Vector.png";
 const Landing = () => {
   return (
     <div>
-      <div className="w-full h-[100%] bg-gradient-to-r from-violet-800 via-violet-500 to-violet-800 md:flex overflow-hidden ">
-        <section className="2xl:ml-56 lg:ml-36 ml-6 2xl:mr-[20vh] lg:mr-5 md:mr-5 mr-2">
-          <div className=" text-gray-100 text-3xl font-bold tracking-widest" style={{ fontFamily: "Saira" }}>
-            <h1 className="2xl:pt-52 lg:pt-52 md:pt-32 pt-16">Successful coaches are visionaries</h1>
+      <div className="w-full 2xl:h-[90vh] lg:h-[80vh] md:h-[80vh] bg-gradient-to-r from-violet-800 via-violet-500 to-violet-800 md:flex overflow-hidden ">
+        <section className="mx-auto 2xl:max-w-screen-xl lg:pl-16 md:pl-10 pl-10 animate-fade-right animate-duration-[2000ms] animate-delay-500">
+          <div className=" text-gray-100 text-2xl font-bold tracking-widest  " style={{ fontFamily: "Saira" }}>
+            <h1 className="2xl:pt-24 lg:pt-36 md:pt-32 pt-16">Successful coaches are visionaries</h1>
           </div>
 
-          <div className='2xl:w-full lg:w-[100%] md:w-[100%]'>
+          <div className='2xl:w-[100%] lg:w-[100%] md:w-[100%]'>
             <h1
-              className="pt-20 2xl:text-[8vh] lg:text-[6vh] md:text-[5vh] text-[4vh] font-semibold text-white tracking-normal"
+              className=" 2xl:text-[6vh] lg:text-[5vh] md:text-[5vh] text-[4vh] font-semibold text-white tracking-normal"
               style={{ fontFamily: "Rowdies" }}>
               Good <span className="text-[#4BE5CA]">coaching </span> is <br /> good teaching & <br /> nothing
               else.
             </h1>
           </div>
 
-          <div className="md:pt-10 pt-9 md:pb-0 pb-10">
+          <div className="md:pt-8 pt-9 md:pb-0 pb-10">
             <button
               className=" border-2 rounded-[8px] border-white text-white md:text-[18px] text-[14px] p-3 font-bold md:mt-12 md:mb-40 md:p-3 md:pl-10 md:pr-10 tracking-widest"
               style={{ fontFamily: "Saira" }}
@@ -37,8 +37,8 @@ const Landing = () => {
         </section>
 
         <section>
-          <div className="ml-24 mt-24 hidden md:flex ">
-            <img className="object-cover 2xl:h-[100%] 2xl:w-[100%] lg:h-[100%] lg:w-[100%] md:h-[100%] md:w-[100%]" src={Girl} />
+          <div className="2xl:ml-72 lg:ml-72 2xl:mr-32 lg:mr-10  mt-0 hidden md:flex animate-jump animate-duration-[2000ms]">
+            <img className="object-cover 2xl:h-[91vh] 2xl:w-[100%] lg:h-[95vh] lg:w-[80%] md:h-[100%] md:w-[100%]" src={Girl} />
           </div>
         </section>
       </div>

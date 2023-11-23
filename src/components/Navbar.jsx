@@ -34,12 +34,12 @@ const Navbar1 = () => {
               <ul
                 className="nav2  items-center gap-6 text-[16px] font-[1000]  lg:flex menu p-4 pt-10 w-80 min-h-full bg-base-200 text-base-content"
                 style={{ fontFamily: "Saira" }}>
-                <NavLink to="/" activeClassName="active" exact className="nav-link text-blue-400">
+                <NavLink to="/" activeClassName="active" exact className="nav-link text-blue-400" style={{ fontFamily: "Saira" }}>
                   Home
                 </NavLink>
                 <div className="dropdown dropdown-hover dropdown-end">
                   <label className="btn btn-ghost" tabIndex={0}>
-                    <li className="font-bold text-white text-[16px] "> Courses</li>
+                    <li className="font-bold text-white text-[16px] " style={{ fontFamily: "Saira" }}> Courses</li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="11"
@@ -54,7 +54,7 @@ const Navbar1 = () => {
                   </label>
                   <ul
                     tabIndex={0}
-                    className="dropdown-content z-[1] menu menu-compact bg-white shadow rounded text-1xl font-bold text-black pt-4 pb-5">
+                    className="dropdown-content z-[1] menu menu-compact bg-white shadow rounded text-1xl font-bold text-black pt-4 pb-5 " >
                     <li>
                       <a href="#">TestOne</a>
                     </li>
@@ -72,7 +72,7 @@ const Navbar1 = () => {
               </ul>
             </div>
           </div>
-          <div className="nav1 flex items-center md:gap-4 gap-2 pl-1 lg:pl-2 md:pl-0 md:pr-0 pr-16">
+          <div className="nav1 flex items-center md:gap-4 gap-2 pl-1 lg:pl-2 md:pl-0 md:pr-0 pr-16 animate-fade">
             <Link to="/">
               <img className="md:w-[40px] md:h-[60px] w-[28px] h-[40px]" src={logo} alt="logo" />
             </Link>
