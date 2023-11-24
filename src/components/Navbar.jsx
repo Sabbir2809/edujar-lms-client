@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 import logo from "./../assets/Frame.svg";
 import Icon1 from "./../assets/Icon1.svg";
 import Icon2 from "./../assets/Icon2.svg";
@@ -31,12 +32,14 @@ const Navbar1 = () => {
             <div className="drawer-side ">
               <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay "></label>
               <ul
-                className=" nav2  items-center gap-6 text-[16px] font-[1000]  lg:flex menu p-4 pt-10 w-80 min-h-full bg-base-200 text-base-content"
+                className="nav2  items-center gap-6 text-[16px] font-[1000]  lg:flex menu p-4 pt-10 w-80 min-h-full bg-base-200 text-base-content"
                 style={{ fontFamily: "Saira" }}>
-                <li>Home</li>
+                <NavLink to="/" activeClassName="active" exact className="nav-link text-blue-400" style={{ fontFamily: "Saira" }}>
+                  Home
+                </NavLink>
                 <div className="dropdown dropdown-hover dropdown-end">
                   <label className="btn btn-ghost" tabIndex={0}>
-                    <li className="font-bold text-white text-[16px] "> Courses</li>
+                    <li className="font-bold text-white text-[16px] " style={{ fontFamily: "Saira" }}> Courses</li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="11"
@@ -51,35 +54,35 @@ const Navbar1 = () => {
                   </label>
                   <ul
                     tabIndex={0}
-                    className="dropdown-content z-[1] menu menu-compact bg-white shadow rounded text-1xl font-bold text-black pt-4 pb-5">
+                    className="dropdown-content z-[1] menu menu-compact bg-white shadow rounded text-1xl font-bold text-black pt-4 pb-5 " >
                     <li>
                       <a href="#">TestOne</a>
                     </li>
                     <li>
                       <a href="#">TestTwo</a>
                     </li>
-                    <li>
-                      <a href="#">TestThree</a>
-                    </li>
-                    <li>
-                      <a href="#">TestThree</a>
-                    </li>
                   </ul>
                 </div>
-                <li>Blog</li>
-                <li>Shop</li>
-                <li>Pages</li>
-                <li>Events</li>
+                <NavLink to="/blog" activeClassName="active" exact className="nav-link">
+                  Blog
+                </NavLink>
+                <NavLink to="/event" activeClassName="active" exact className="nav-lin">
+                  Event
+                </NavLink>
               </ul>
             </div>
           </div>
-          <div className="nav1 flex items-center md:gap-4 gap-2 pl-1 lg:pl-2 md:pl-0 md:pr-0 pr-16">
-            <img className="md:w-[40px] md:h-[60px] w-[28px] h-[40px]" src={logo} />
-            <h1
-              className="text-1xl font-bold text-black "
-              style={{ fontFamily: "Revalia", color: "#04016C" }}>
-              EDU<span style={{ color: "#2AAA94" }}>JAR</span>
-            </h1>
+          <div className="nav1 flex items-center md:gap-4 gap-2 pl-1 lg:pl-2 md:pl-0 md:pr-0 pr-16 animate-fade">
+            <Link to="/">
+              <img className="md:w-[40px] md:h-[60px] w-[28px] h-[40px]" src={logo} alt="logo" />
+            </Link>
+            <Link to="/">
+              <h1
+                className="text-1xl font-bold text-black "
+                style={{ fontFamily: "Revalia", color: "#04016C" }}>
+                EDU<span style={{ color: "#2AAA94" }}>JAR</span>
+              </h1>
+            </Link>
           </div>
         </div>
 
@@ -88,7 +91,9 @@ const Navbar1 = () => {
           <ul
             className=" nav2  items-center font-medium lg:gap-6 md:gap-2  md: text-[15px] lg:text-[16px] font-[1000] text-black hidden md:flex"
             style={{ fontFamily: "Saira" }}>
-            <li>Home</li>
+            <NavLink to="/" activeClassName="active" exact className="nav-link text-blue-400">
+              Home
+            </NavLink>
             <div className="dropdown dropdown-hover dropdown-end">
               <label className="btn btn-ghost" tabIndex={0}>
                 <li className="text-black text-[16px] "> Courses</li>
@@ -108,18 +113,14 @@ const Navbar1 = () => {
                 <li>
                   <a href="#">TestTwo</a>
                 </li>
-                <li>
-                  <a href="#">TestThree</a>
-                </li>
-                <li>
-                  <a href="#">TestThree</a>
-                </li>
               </ul>
             </div>
-            <li>Blog</li>
-            <li>Shop</li>
-            <li>Pages</li>
-            <li>Events</li>
+            <NavLink to="/blog" activeClassName="active" className="nav-link">
+              Blog
+            </NavLink>
+            <NavLink to="/event" activeClassName="active" className="nav-link">
+              Event
+            </NavLink>
           </ul>
         </div>
 
@@ -132,13 +133,13 @@ const Navbar1 = () => {
         {/*Login / Register*/}
         <div className="flex md:gap-5 gap-2">
           <button className="text-black font-bold hover:text-[#2AAA94]" style={{ fontFamily: "Saira" }}>
-            Login
+            <Link to="/login">Login</Link>
           </button>
           <button
             className=" btn1 text-white font-semibold w-20 h-8 md:mr-0 mr-3 md:w-[105px] md:h-[44px] text-[15px] hover:text-[#2AAA94]"
             style={{ fontFamily: "Saira" }}
             type="submit">
-            Register
+            <Link to="/registration">Register</Link>
           </button>
         </div>
       </div>

@@ -3,14 +3,14 @@ import homeEdu from "./../assets/homeEdu.png";
 const SectionLast = () => {
   return (
     <div>
-      <div className="bg-gradient-to-t from-sky-100 to-slate-100 w-screen h-[1800px] lg:pl-36 lg:pr-36 lg:pt-14">
+      <div className="bg-gradient-to-t from-sky-100 to-slate-100 w-full h-[100%] 2xl:pl-36 2xl:pr-36 lg:pt-14 pb-10">
         <section>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-10">
             <div>
-              <img className="w-[664px] h-[666px]" src={homeEdu} alt="" />
+              <img className="w-[100%] h-[100%] pl-10 pr-10 pt-5" src={homeEdu} alt="" />
             </div>
 
-            <div>
+            <div className="pl-10 pr-10">
               <h1
                 className="text-[#1D1D45] font-extrabold text-8xl pt-32 tracking-wide"
                 style={{ fontFamily: "Rowdies" }}>
