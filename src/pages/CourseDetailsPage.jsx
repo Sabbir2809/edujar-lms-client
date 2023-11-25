@@ -1,5 +1,5 @@
 import CourseDetails from "../components/CourseDetails.jsx";
-import MainLayout from "../components/MainLayout.jsx";
+import MainLayout from "../layout/MainLayout.jsx";
 
 const CourseDetailsPage = () => {
   return (

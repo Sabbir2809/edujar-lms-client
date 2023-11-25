@@ -1,66 +1,96 @@
-import Url from "../assets/RegistrationBG.jpg"
-import { TextInput} from "keep-react";
-import {Envelope, EyeSlash, Lock, IdentificationBadge, SimCard} from "phosphor-react";
-import {Link} from "react-router-dom";
-function Registration() {
-    return (
-        <div className="relative h-screen flex items-center justify-center px-10">
-            {/* Background Image */}
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${Url}')` }}></div>
+import { MdDriveFileRenameOutline, MdEmail, MdOutlinePassword } from "react-icons/md";
+import { Link } from "react-router-dom";
+import signup from "./../assets/signup.svg";
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black opacity-75"></div>
-
-            {/* Content */}
-            <div className="z-10 grid md:grid-cols-2 lg:grid-cols-2">
-                <div className="px-10">
-                    <h1 className="text-info text-8xl font-bold">Create New Account</h1>
-                    <h3 className="py-3">Already Registered ? <Link className="btn btn-sm" to="/login">Login</Link></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper mauris in magna venenatis suscipit. </p>
-                </div>
-                <div className="bg-slate-700 opacity-75 rounded-[30px] p-10">
-                    <div>
-                        <h1 className="text-2xl pb-5 ">Register</h1>
-                        <TextInput
-                            placeholder="Name"
-                            color="gray"
-                            addon={<IdentificationBadge size={20} color="#5E718D" />}
-                            addonPosition="left"
-                        />
-                        <br/>
-                        <TextInput
-                            placeholder="example@gmail.com"
-                            color="gray"
-                            sizing="md"
-                            addon={<Envelope size={20} color="#5E718D" />}
-                            addonPosition="left"
-                        />
-                        <br/>
-                        <TextInput
-                            placeholder="Mobile No"
-                            color="gray"
-                            sizing="md"
-                            addon={<SimCard size={20} color="#5E718D" />}
-                            addonPosition="left"
-                        />
-                        <br/>
-                        <TextInput
-                            placeholder="password"
-                            color="gray"
-                            sizing="md"
-                            type="password"
-                            addon={<Lock size={20} color="#5E718D" />}
-                            addonPosition="left"
-                            icon={<EyeSlash size={20} color="#5E718D" />}
-                            iconPosition="right"
-                        />
-                        <div className="pt-5">
-                            <button className="btn bg-green-300 text-white text-bold text-lg w-full">Submit</button>
-                        </div>
-                    </div>
-                </div>
+const Registration = () => {
+  return (
+    <div className="min-w-screen h-[100vh] bg-white flex items-center justify-center px-5 py-5 mt-7">
+      <div
+        className="bg-slate-200 text-black rounded-3xl shadow-xl w-full overflow-hidden"
+        style={{ maxWidth: "1000px" }}>
+        <div className="md:flex w-full">
+          <div className="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
+            <img src={signup} />
+          </div>
+          <div className="w-full md:w-1/2 py-10 px-5 md:px-10">
+            <div className="text-center mb-10">
+              <h1 className="font-bold text-3xl text-gray-900">REGISTER</h1>
             </div>
+            <div className="">
+              <div className="flex -mx-3">
+                <div className="w-full px-3 mb-5">
+                  <label htmlFor="" className="text-xs font-semibold px-1">
+                    Full Name
+                  </label>
+                  <div className="flex">
+                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                      <MdDriveFileRenameOutline />
+                    </div>
+                    <input
+                      type="text"
+                      className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 bg-white outline-none focus:border-indigo-500"
+                      placeholder="full name"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex -mx-3">
+                <div className="w-full px-3 mb-5">
+                  <label htmlFor="" className="text-xs font-semibold px-1">
+                    Email
+                  </label>
+                  <div className="flex">
+                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                      <MdEmail />
+                    </div>
+                    <input
+                      type="email"
+                      className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 bg-white outline-none focus:border-indigo-500"
+                      placeholder="email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex -mx-3">
+                <div className="w-full px-3 mb-12">
+                  <label htmlFor="" className="text-xs font-semibold px-1">
+                    Password
+                  </label>
+                  <div className="flex">
+                    <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                      <MdOutlinePassword />
+                    </div>
+                    <input
+                      type="password"
+                      className="w-full bg-white -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      placeholder="password"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex -mx-3">
+                <div className="w-full px-3 mb-5">
+                  <button className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">
+                    REGISTER NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <hr className="mb-6 border-t" />
+              <div className="text-center">
+                <Link
+                  to="/login"
+                  className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800">
+                  Already have an account? Login!
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
+
 export default Registration;
