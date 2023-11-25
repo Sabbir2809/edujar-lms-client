@@ -1,5 +1,6 @@
 import ForgetPassword from "../components/ForgetPassword.jsx";
-import MainLayout from "../components/MainLayout.jsx";
+import MainLayout from "../layout/MainLayout.jsx";
+
 const ForgetPasswordPage = () => {
   return (
     <MainLayout>

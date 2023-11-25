@@ -1,5 +1,5 @@
 import Login from "../components/Login.jsx";
-import MainLayout from "../components/MainLayout.jsx";
+import MainLayout from "../layout/MainLayout.jsx";
 
 const LoginPage = () => {
   return (
