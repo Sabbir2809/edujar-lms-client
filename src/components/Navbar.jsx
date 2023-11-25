@@ -29,8 +29,8 @@ const Navbar1 = () => {
                 </svg>
               </label>
             </div>
-            <div className="drawer-side ">
-              <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay "></label>
+            <div className="drawer-side">
+              <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
               <ul
                 className="nav2  items-center gap-6 text-[16px] font-[1000]  lg:flex menu p-4 pt-10 w-80 min-h-full bg-base-200 text-base-content"
                 style={{ fontFamily: "Saira" }}>

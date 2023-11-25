@@ -5,7 +5,7 @@ const Landing = () => {
   return (
     <div>
       <div className="w-full 2xl:h-[90vh] lg:h-[80vh] md:h-[80vh] bg-gradient-to-r from-violet-800 via-violet-500 to-violet-800 md:flex overflow-hidden ">
-        <section className="mx-auto 2xl:max-w-screen-xl lg:pl-16 md:pl-10 pl-10 animate-fade-right animate-duration-[2000ms] animate-delay-500">
+        <section className="mx-auto 2xl:max-w-screen-xl lg:pl-16 md:pl-10 pl-10 lg:animate-fade-right animate-duration-[2000ms] animate-delay-500">
           <div className=" text-gray-100 text-2xl font-bold tracking-widest  " style={{ fontFamily: "Saira" }}>
             <h1 className="2xl:pt-24 lg:pt-36 md:pt-32 pt-16">Successful coaches are visionaries</h1>
           </div>
