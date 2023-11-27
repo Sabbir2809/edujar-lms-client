@@ -5,7 +5,7 @@ const CourseDetails = () => {
     return (
         <div className='bg-white'>
 
-            <div className='md:mx-auto max-w-screen-xl gap-16 px-12 md:flex grid grid-cols-1 py-10 bg-white'>
+            <div className='md:mx-auto max-w-screen-xl gap-24 px-12 md:flex grid grid-cols-1 py-10 bg-white'>
                 <section className='mx-[-30px]'>
                     <div>
                         <h1 className='text-8xl text-black font-semibold'>English Grammar Crash Course</h1>
@@ -85,14 +85,8 @@ const CourseDetails = () => {
 
 
 
-
-
-
-
-
-
-                <section className='md:order-last order-first  '>
-                    <div className='rounded border border-gray-100 drop-shadow-md bg-white md:m-0 m-[-35px] mt-10'>
+                <section className='md:order-last order-first '>
+                    <div className='rounded border border-gray-100 drop-shadow-md bg-white md:m-[-35px] m-[-35px] md:mt-14 '>
 
                         <div>
                             <img className='w-[650px]' src='https://cdn.10minuteschool.com/lg/images/thumbnails/skills/english-grammar-crash-course-course-thumbnail-by-sakib-bin-rashid-16x9.jpg' alt="" />
