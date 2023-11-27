@@ -1,4 +1,4 @@
-import Login from "../components/Login.jsx";
+import Login from "../components/account/Login.jsx";
 import MainLayout from "../layout/MainLayout.jsx";
 
 const LoginPage = () => {

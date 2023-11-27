@@ -25,7 +25,7 @@ const Navbar = () => {
                 Home
               </NavLink>
               <div className="dropdown dropdown-hover dropdown-end">
-                <label className="btn btn-ghost">
+                <label className="btn btn-ghost font-normal" style={{ fontFamily: "Saira" }}>
                   <NavLink
                     to="/courses"
                     className={({ isActive }) => (isActive ? "text-blue-400" : "text-black")}>
@@ -64,12 +64,16 @@ const Navbar = () => {
       <ul
         className="nav2 items-center font-medium lg:gap-6 md:gap-2 md:text-[15px] lg:text-[16px] text-black hidden md:flex"
         style={{ fontFamily: "Saira" }}>
-        <NavLink to="/" className={({ isActive }) => (isActive ? "text-blue-400" : "text-black")}>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "text-blue-400" : "text-black hover:text-blue-400")}>
           Home
         </NavLink>
         <div className="dropdown dropdown-hover dropdown-end">
-          <label className="btn btn-ghost">
-            <NavLink to="/courses" className={({ isActive }) => (isActive ? "text-blue-400" : "text-black")}>
+          <label className="btn btn-ghost font-normal" style={{ fontFamily: "Saira" }}>
+            <NavLink
+              to="/courses"
+              className={({ isActive }) => (isActive ? "text-blue-400" : "text-black hover:text-blue-400")}>
               Courses
             </NavLink>
             <MdOutlineKeyboardArrowDown />
@@ -82,24 +86,32 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <NavLink to="/blogs" className={({ isActive }) => (isActive ? "text-blue-400" : "text-black")}>
+        <NavLink
+          to="/blogs"
+          className={({ isActive }) => (isActive ? "text-blue-400" : "text-black hover:text-blue-400")}>
           Blogs
         </NavLink>
       </ul>
       {/* Account */}
       <div className="flex md:gap-5 gap-2 items-center">
-        <Link to="/profile" className="text-black font-bold" style={{ fontFamily: "Saira" }}>
+        <Link
+          to="/profile"
+          className="text-black font-bold hover:text-blue-400"
+          style={{ fontFamily: "Saira" }}>
           <CgProfile size={25} />
         </Link>
-        <Link to="/login" className="text-black font-bold" style={{ fontFamily: "Saira" }}>
+        <Link
+          to="/login"
+          className="text-black font-bold hover:text-blue-400"
+          style={{ fontFamily: "Saira" }}>
           Login
         </Link>
         <div>
           <Link to="/registration">
             <button
-              className="btn1 text-white font-semibold w-18 h-8 md:mr-0 mr-3 md:w-[105px] md:h-[44px] text-[15px]"
+              className="btn1 text-white font-semibold w-20 h-10 md:mr-0 mr-3 md:w-[105px] md:h-[44px] text-[15px]"
               style={{ fontFamily: "Saira" }}>
-              Registration
+              Sign Up
             </button>
           </Link>
         </div>

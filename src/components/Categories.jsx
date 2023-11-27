@@ -2,6 +2,32 @@ import { Card } from "keep-react";
 import { Notification } from "phosphor-react";
 
 const Categories = () => {
+  const categoriesData = [
+    {
+      title: "Language Course",
+      quantity: 3,
+    },
+    {
+      title: "Skill & IT",
+      quantity: 5,
+    },
+    {
+      title: "Design & Creative",
+      quantity: 4,
+    },
+    {
+      title: "Career",
+      quantity: 2,
+    },
+    {
+      title: "Freelancing",
+      quantity: 3,
+    },
+    {
+      title: "Kid's Courses",
+      quantity: 1,
+    },
+  ];
   return (
     <div className="bg-gradient-to-b from-slate-50 to-cyan-100 py-2 md:py-8">
       <div className="text-center">
@@ -13,60 +39,17 @@ const Categories = () => {
         <p className="font-bold">12,000+ unique online course list designs</p>
       </div>
       <div className="grid justify-center grid-cols-2 md:grid-cols-6 lg:grid-cols-6 gap-4 px-5 md:px-20 my-10 md:py-8">
-        <Card className="w-full p-4 hover:border-green-300">
-          <Card.Container className="flex items-center justify-center">
-            <Notification className="bg-green-500 text-slate-50 p-4 rounded" size={60} />
-          </Card.Container>
-          <Card.Container className="text-center">
-            <Card.Title>Digital Marketing</Card.Title>
-            <Card.Description className="py-2">10 courses</Card.Description>
-          </Card.Container>
-        </Card>
-        <Card className="w-full p-4 hover:border-green-300">
-          <Card.Container className="flex items-center justify-center">
-            <Notification className="bg-green-500 text-slate-50 p-4 rounded" size={60} />
-          </Card.Container>
-          <Card.Container className="text-center">
-            <Card.Title>Digital Marketing</Card.Title>
-            <Card.Description className="py-2">10 courses</Card.Description>
-          </Card.Container>
-        </Card>
-        <Card className="w-full p-4 hover:border-green-300">
-          <Card.Container className="flex items-center justify-center">
-            <Notification className="bg-green-500 text-slate-50 p-4 rounded" size={60} />
-          </Card.Container>
-          <Card.Container className="text-center">
-            <Card.Title>Digital Marketing</Card.Title>
-            <Card.Description className="py-2">10 courses</Card.Description>
-          </Card.Container>
-        </Card>
-        <Card className="w-full p-4 hover:border-green-300">
-          <Card.Container className="flex items-center justify-center">
-            <Notification className="bg-green-500 text-slate-50 p-4 rounded" size={60} />
-          </Card.Container>
-          <Card.Container className="text-center">
-            <Card.Title>Digital Marketing</Card.Title>
-            <Card.Description className="py-2">10 courses</Card.Description>
-          </Card.Container>
-        </Card>
-        <Card className="w-full p-4 hover:border-green-300">
-          <Card.Container className="flex items-center justify-center">
-            <Notification className="bg-green-500 text-slate-50 p-4 rounded" size={60} />
-          </Card.Container>
-          <Card.Container className="text-center">
-            <Card.Title>Digital Marketing</Card.Title>
-            <Card.Description className="py-2">10 courses</Card.Description>
-          </Card.Container>
-        </Card>
-        <Card className="w-full p-4 hover:border-green-300">
-          <Card.Container className="flex items-center justify-center">
-            <Notification className="bg-green-500 text-slate-50 p-4 rounded" size={60} />
-          </Card.Container>
-          <Card.Container className="text-center">
-            <Card.Title>Digital Marketing</Card.Title>
-            <Card.Description className="py-2">10 courses</Card.Description>
-          </Card.Container>
-        </Card>
+        {categoriesData.map((category, index) => (
+          <Card key={index} className="w-full p-4 hover:border-green-300">
+            <Card.Container className="flex items-center justify-center">
+              <Notification className="bg-green-500 text-slate-50 p-4 rounded" size={60} />
+            </Card.Container>
+            <Card.Container className="text-center">
+              <Card.Title>{category.title}</Card.Title>
+              <Card.Description className="py-2">{category.quantity} courses</Card.Description>
+            </Card.Container>
+          </Card>
+        ))}
       </div>
     </div>
   );
