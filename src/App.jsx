@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NotFound from "./components/NotFound.jsx";
 import CourseDetailsPage from "./pages/CourseDetailsPage.jsx";
 import ForgetPasswordPage from "./pages/ForgetPasswordPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
         <Route path="/course-details" element={<CourseDetailsPage />} />
         <Route path="/student-dashboard" element={<StudentsDasboard />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
