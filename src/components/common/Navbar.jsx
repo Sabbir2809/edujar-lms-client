@@ -2,9 +2,14 @@ import { CgProfile } from "react-icons/cg";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { RiMenu2Fill } from "react-icons/ri";
 import { Link, NavLink } from "react-router-dom";
+import { getToken, removeSession } from "../../utility/SessionHelper";
 import logo from "./../../assets/Frame.svg";
 
 const Navbar = () => {
+  const handleLogout = () => {
+    removeSession();
+  };
+
   return (
     <nav className="w-full md:w-full lg:w-screen h-[66px] bg-slate-50 pl-1 md:pl-10 lg:pl-36 md:pr-10 lg:pr-36 flex items-center justify-between fixed top-0 z-40">
       <div className="flex items-center overflow-hidden">
@@ -94,27 +99,40 @@ const Navbar = () => {
       </ul>
       {/* Account */}
       <div className="flex md:gap-5 gap-2 items-center">
-        <Link
-          to="/profile"
-          className="text-black font-bold hover:text-blue-400"
-          style={{ fontFamily: "Saira" }}>
-          <CgProfile size={25} />
-        </Link>
-        <Link
-          to="/login"
-          className="text-black font-bold hover:text-blue-400"
-          style={{ fontFamily: "Saira" }}>
-          Login
-        </Link>
-        <div>
-          <Link to="/registration">
-            <button
-              className="btn1 text-white font-semibold w-20 h-10 md:mr-0 mr-3 md:w-[105px] md:h-[44px] text-[15px]"
+        {getToken() ? (
+          <>
+            <Link
+              to="/profile"
+              className="text-black font-bold hover:text-blue-400"
               style={{ fontFamily: "Saira" }}>
-              Sign Up
-            </button>
-          </Link>
-        </div>
+              <CgProfile size={25} />
+            </Link>
+            <span
+              onClick={handleLogout}
+              className="text-black font-bold hover:text-blue-400 cursor-pointer"
+              style={{ fontFamily: "Saira" }}>
+              Logout
+            </span>
+          </>
+        ) : (
+          <>
+            <Link
+              to="/login"
+              className="text-black font-bold hover:text-blue-400"
+              style={{ fontFamily: "Saira" }}>
+              Login
+            </Link>
+            <div>
+              <Link to="/registration">
+                <button
+                  className="btn1 text-white font-semibold w-20 h-10 md:mr-0 mr-3 md:w-[105px] md:h-[44px] text-[15px]"
+                  style={{ fontFamily: "Saira" }}>
+                  Sign Up
+                </button>
+              </Link>
+            </div>
+          </>
+        )}
       </div>
     </nav>
   );

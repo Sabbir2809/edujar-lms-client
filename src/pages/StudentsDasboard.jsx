@@ -1,4 +1,4 @@
-import VideoContainer from "../components/VideoContainer.jsx";
+import VideoContainer from "../components/video/VideoContainer.jsx";
 import MainLayout from "../layout/MainLayout.jsx";
 
 const StudentsDasboard = () => {

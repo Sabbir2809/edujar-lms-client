@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
         <Route path="/course-details" element={<CourseDetailsPage />} />
-        <Route path="/student-dashboard" element={<StudentsDasboard />} />
+        <Route path="/my-courses" element={<StudentsDasboard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

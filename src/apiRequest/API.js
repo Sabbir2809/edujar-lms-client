@@ -1,26 +1,60 @@
 import axios from "axios";
+import { ErrorToast, SuccessToast } from "../utility/FormHelper";
+import { setToken } from "../utility/SessionHelper";
 
-const BaseURL = "http://localhost:8000/api/v1";
-export const RegistrationRequest = async (
-  fullName,
-  email,
-  phoneNumber,
-  password
-) => {
+const BASE_URL = `http://localhost:8000/api/v1`;
+// const Headers = { headers: { token: getToken() } };
+
+// ::::::::: API: REGISTRATION API :::::::::
+export const REGISTRATION_API = async (fullName, email, password) => {
   try {
-    let reqBody = {
-      fullName: fullName,
-      email: email,
-      phoneNumber: phoneNumber,
-      password: password,
-    };
-    let URL = BaseURL + "/registration";
-    let result = await axios.post(URL, reqBody);
-    if (result.status === 201) {
-      console.log("success");
-      return result.data;
+    const postBody = { fullName, email, password };
+    const { data } = await axios.post(`${BASE_URL}/registration`, postBody);
+    if (data.success) {
+      SuccessToast(data.message);
+      return true;
     }
-  } catch (err) {
-    console.error("Registration error:", err);
+  } catch (error) {
+    ErrorToast(error.response.data.message);
+  }
+};
+
+// ::::::::: API: LOGIN API :::::::::
+export const LOGIN_API = async (email, password) => {
+  try {
+    const postBody = { email, password };
+    const { data } = await axios.post(`${BASE_URL}/login`, postBody);
+    if (data.success) {
+      // set email, token in localStorage
+      setToken(data.token);
+      SuccessToast(data.message);
+      return true;
+    }
+  } catch (error) {
+    ErrorToast(error.response.data.message);
+  }
+};
+
+// ::::::::: API: Category :::::::::
+export const CATEGORY_API_REQUEST = async () => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/all-category`);
+    if (data.success) {
+      return data.data;
+    }
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: featured-course :::::::::
+export const ALL_COURSE_API_REQUEST = async () => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/all-course`);
+    if (data.success) {
+      return data.data;
+    }
+  } catch (error) {
+    return [];
   }
 };
