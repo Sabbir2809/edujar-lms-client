@@ -1,5 +1,5 @@
-import MainLayout from "../components/MainLayout.jsx";
-import Registration from "../components/Registration.jsx";
+import Registration from "../components/account/Registration.jsx";
+import MainLayout from "../layout/MainLayout.jsx";
 
 const RegistrationPage = () => {
   return (
