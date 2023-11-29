@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 // import cardImage from "./../assets/cardImage.jpg";
 import { useEffect, useState } from "react";
-import { ALL_COURSE_API_REQUEST } from "../apiRequest/API";
+import { ALL_COURSE_API_REQUEST } from "../../apiRequest/API";
 const Course = () => {
   const [courses, SetAllCourses] = useState([]);
 

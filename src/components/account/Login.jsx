@@ -3,7 +3,7 @@ import { MdEmail, MdOutlinePassword } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { LOGIN_API } from "../../apiRequest/API";
 import { ErrorToast } from "../../utility/FormHelper";
-import Loading from "../Loading";
+import Loading from "../common/Loader";
 import login from "./../../assets/login.svg";
 
 const Login = () => {

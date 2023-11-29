@@ -1,9 +1,9 @@
 import axios from "axios";
 import { ErrorToast, SuccessToast } from "../utility/FormHelper";
-import { setToken } from "../utility/SessionHelper";
+import { getToken, setToken } from "../utility/SessionHelper";
 
 const BASE_URL = `http://localhost:8000/api/v1`;
-// const Headers = { headers: { token: getToken() } };
+const Headers = { headers: { token: getToken() } };
 
 // ::::::::: API: REGISTRATION API :::::::::
 export const REGISTRATION_API = async (fullName, email, password) => {
@@ -47,12 +47,24 @@ export const CATEGORY_API_REQUEST = async () => {
   }
 };
 
-// ::::::::: API: featured-course :::::::::
+// ::::::::: API: fall-course :::::::::
 export const ALL_COURSE_API_REQUEST = async () => {
   try {
     const { data } = await axios.get(`${BASE_URL}/all-course`);
     if (data.success) {
       return data.data;
+    }
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: fall-course :::::::::
+export const GET_MODULE_LESSON_API_REQUEST = async () => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/get-all-lesson`, Headers);
+    if (data.success) {
+      return data;
     }
   } catch (error) {
     return [];
