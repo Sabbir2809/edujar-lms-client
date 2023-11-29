@@ -4,9 +4,8 @@ const ForgetPassword = () => {
       <div className="mt-7 rounded-xl shadow-lg dark:bg-slate-200 dark:border-gray-700">
         <div className="p-4 sm:p-7">
           <div className="text-center">
-            <h1 className="font-bold text-3xl text-gray-900">Forgot password?</h1>
+            <h2 className="font-bold text-3xl text-gray-900">FORGET PASSWORD</h2>
           </div>
-
           <div className="mt-5">
             <form>
               <div className="grid gap-y-4">

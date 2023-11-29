@@ -22,7 +22,7 @@ const WhyLearn = () => {
   ];
   return (
     <div>
-      <div className="bg-gradient-to-l from-violet-600 via-violet-600 to-indigo-500  w-full h-[100%] pb-28 lg:pl-36 lg:pr-36">
+      <div className="bg-gradient-to-l from-sky-500 to-indigo-500 w-full h-[100%] pb-28 lg:pl-36 lg:pr-36">
         <div>
           <h1
             className="text-white font-bold text-7xl tracking-wide pt-24 text-center"

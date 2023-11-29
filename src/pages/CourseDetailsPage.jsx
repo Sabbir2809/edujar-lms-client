@@ -1,4 +1,4 @@
-import CourseDetails from "../components/CourseDetails.jsx";
+import CourseDetails from "../components/course/CourseDetails.jsx";
 import MainLayout from "../layout/MainLayout.jsx";
 
 const CourseDetailsPage = () => {
