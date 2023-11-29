@@ -4,7 +4,6 @@ import HomePage from "./pages/HomePage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import RegistrationPage from "./pages/RegistrationPage.jsx";
 import CourseDetailsPage from "./pages/CourseDetailsPage.jsx";
-import StudentsDasboard from "./pages/StudentsDasboard.jsx";
 
 const App = () => {
   return (
@@ -15,7 +14,6 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
         <Route path="/course-details" element={<CourseDetailsPage />} />
-          <Route path="/student-dashboard" element={<StudentsDasboard/>}/>
       </Routes>
     </BrowserRouter>
   );
