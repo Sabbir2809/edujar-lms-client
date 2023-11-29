@@ -21,136 +21,84 @@ const TestimonialSlide = () => {
       spaceBetween: 30,
     },
   };
+  const review = [
+    {
+      id: 1,
+      image: "https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg",
+      name: "Anna Smith",
+      comments:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam quas, voluptates omnis nulla eaodio quia similique corrupti magnam.",
+    },
+    {
+      id: 2,
+      image: "https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg",
+      name: "Anna Smith",
+      comments:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam quas, voluptates omnis nulla eaodio quia similique corrupti magnam.",
+    },
+    {
+      id: 3,
+      image: "https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg",
+      name: "Anna Smith",
+      comments:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam quas, voluptates omnis nulla eaodio quia similique corrupti magnam.",
+    },
+    {
+      id: 4,
+      image: "https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg",
+      name: "Anna Smith",
+      comments:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam quas, voluptates omnis nulla eaodio quia similique corrupti magnam.",
+    },
+    {
+      id: 5,
+      image: "https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg",
+      name: "Anna Smith",
+      comments:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam quas, voluptates omnis nulla eaodio quia similique corrupti magnam.",
+    },
+  ];
 
   return (
-    <div className="p-10 bg-gradient-to-r from-sky-100 to-slate-100">
-      <div className="text-center">
-        <h1
-          className="text-6xl font-bold text-center pt-14 pb-7 text-black tracking-wide"
+    <div className="bg-gradient-to-b from-slate-50 to-cyan-100 py-2 md:py-8">
+      <div className="text-center pb-3 md:pb-10">
+        <h2
+          className="text-6xl font-bold text-center text-black tracking-wide"
           style={{ fontFamily: "Rowdies" }}>
           <span className="text-[#2AAA94]">Testimonials</span>
-        </h1>
+        </h2>
         <p className="font-bold">What our student say about us</p>
       </div>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={2}
         spaceBetween={30}
         breakpoints={breakpoints}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
+        speed={600}
         freeMode={true}
         pagination={{
           clickable: true,
         }}
         modules={[FreeMode, Autoplay]}>
-        <SwiperSlide>
-          <div className="m-4 block rounded-lg bg-white p-6 shadow">
-            <div className="">
-              <div className=" flex items-center justify-center gap-5 md:mx-0 md:w-96 lg:mb-0">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg"
-                  className="rounded-full shadow-md"
-                  width={50}
-                  alt=""
-                />
-                <p className="mb-2 text-xl font-semibold">Anna Smith</p>
+        {review.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="block rounded-lg bg-white p-8">
+              <div className="">
+                <div className="flex justify-center">
+                  <img src={item.image} className="rounded-full border-2" width={70} alt={item.name} />
+                </div>
+                <p className="my-2 text-xl text-center font-semibold">{item.name}</p>
               </div>
-              <div className="md:ml-6">
-                <p className="my-6">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam
-                  quas, voluptates omnis nulla ea odio quia similique corrupti magnam.
-                </p>
+              <div>
+                <p className="text-center">{item.comments}</p>
               </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="m-4 block rounded-lg bg-white p-6 shadow">
-            <div className="">
-              <div className=" flex items-center justify-center gap-5 md:mx-0 md:w-96 lg:mb-0">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg"
-                  className="rounded-full shadow-md"
-                  width={50}
-                  alt=""
-                />
-                <p className="mb-2 text-xl font-semibold">Anna Smith</p>
-              </div>
-              <div className="md:ml-6">
-                <p className="my-6">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam
-                  quas, voluptates omnis nulla ea odio quia similique corrupti magnam.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="m-4 block rounded-lg bg-white p-6 shadow">
-            <div className="">
-              <div className=" flex items-center justify-center gap-5 md:mx-0 md:w-96 lg:mb-0">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg"
-                  className="rounded-full shadow-md"
-                  width={50}
-                  alt=""
-                />
-                <p className="mb-2 text-xl font-semibold">Anna Smith</p>
-              </div>
-              <div className="md:ml-6">
-                <p className="my-6">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam
-                  quas, voluptates omnis nulla ea odio quia similique corrupti magnam.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="m-4 block rounded-lg bg-white p-6 shadow">
-            <div className="">
-              <div className=" flex items-center justify-center gap-5 md:mx-0 md:w-96 lg:mb-0">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg"
-                  className="rounded-full shadow-md"
-                  width={50}
-                  alt=""
-                />
-                <p className="mb-2 text-xl font-semibold">Anna Smith</p>
-              </div>
-              <div className="md:ml-6">
-                <p className="my-6">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam
-                  quas, voluptates omnis nulla ea odio quia similique corrupti magnam.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="m-4 block rounded-lg bg-white p-6 shadow">
-            <div className="">
-              <div className=" flex items-center justify-center gap-5 md:mx-0 md:w-96 lg:mb-0">
-                <img
-                  src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg"
-                  className="rounded-full shadow-md"
-                  width={50}
-                  alt=""
-                />
-                <p className="mb-2 text-xl font-semibold">Anna Smith</p>
-              </div>
-              <div className="md:ml-6">
-                <p className="my-6">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae numquam
-                  quas, voluptates omnis nulla ea odio quia similique corrupti magnam.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

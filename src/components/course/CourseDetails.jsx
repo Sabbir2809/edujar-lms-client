@@ -57,7 +57,11 @@ const CourseDetails = () => {
 
         <section className="md:order-last order-first">
           <div className="rounded border border-gray-100 drop-shadow-md bg-white md:m-0 m-[-35px] mt-10 ">
+<<<<<<< HEAD:src/components/CourseDetails.jsx
             <div className=''>
+=======
+            <div className="">
+>>>>>>> 63a5040a4c26d85bfdf7b80715fc77d777a35740:src/components/course/CourseDetails.jsx
               <img
                 className="w-[650px]"
                 src="https://cdn.10minuteschool.com/lg/images/thumbnails/skills/english-grammar-crash-course-course-thumbnail-by-sakib-bin-rashid-16x9.jpg"
