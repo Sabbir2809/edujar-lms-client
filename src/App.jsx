@@ -7,6 +7,7 @@ import LessonModulePage from "./pages/LessonModulePage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import RegistrationPage from "./pages/RegistrationPage.jsx";
+import CategoryCoursePage from "./pages/CategoryCoursePage.jsx";
 
 const App = () => {
   return (
@@ -16,9 +17,13 @@ const App = () => {
         <Route path="/registration" element={<RegistrationPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
-        <Route path="/course-details" element={<CourseDetailsPage />} />
+        <Route path="/course-details/:id" element={<CourseDetailsPage />} />
         <Route path="/my-courses" element={<LessonModulePage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route
+          path="/course-by-category/:id"
+          element={<CategoryCoursePage />}
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

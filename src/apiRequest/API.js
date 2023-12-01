@@ -3,6 +3,7 @@ import { ErrorToast, SuccessToast } from "../utility/FormHelper";
 import { getToken, setToken } from "../utility/SessionHelper";
 
 const BASE_URL = `http://localhost:8000/api/v1`;
+// const BASE_URL = `https://edujar-lms.onrender.com/api/v1`;
 const Headers = { headers: { token: getToken() } };
 
 // ::::::::: API: REGISTRATION API :::::::::
@@ -66,6 +67,21 @@ export const GET_MODULE_LESSON_API_REQUEST = async () => {
     if (data.success) {
       return data;
     }
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: course by category :::::::::
+export const COURSE_BY_CATEGORY_REQUEST = async (categoryID) => {
+  try {
+    const { data } = await axios.get(
+      `${BASE_URL}/course-by-category/` + categoryID
+    );
+    if (data.success) {
+      return data;
+    }
+    return data;
   } catch (error) {
     return [];
   }
