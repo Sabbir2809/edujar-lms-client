@@ -72,8 +72,12 @@ const LessonModule = () => {
           closeIcon={<CaretDown />}
           iconPosition="right"
           flush={false}
+<<<<<<< HEAD
           className="overflow-y-auto"
         >
+=======
+          className="overflow-y-auto">
+>>>>>>> bd0c9f2582f3fd344a80a30e8b219eac930909d1
           {lessonData.map((lesson) => (
             <Accordion.Panel key={lesson._id}>
               <Accordion.Title>{lesson.lessonTitle}</Accordion.Title>
@@ -83,8 +87,12 @@ const LessonModule = () => {
                     <li
                       className="hover:cursor-pointer font-medium border-b-2 py-2 hover:border-sky-500 mb-1"
                       onClick={() => handleClick(video.videoURL)}
+<<<<<<< HEAD
                       key={video._id}
                     >
+=======
+                      key={video._id}>
+>>>>>>> bd0c9f2582f3fd344a80a30e8b219eac930909d1
                       {i + 1} : {video.videoTitle}
                     </li>
                   ))}

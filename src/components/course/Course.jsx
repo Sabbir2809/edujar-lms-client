@@ -40,13 +40,15 @@ const Course = () => {
               <div
                 className="items-center text-black font-semibold pb-2 flex"
                 style={{ fontFamily: "Saira" }}></div>
-              <h2 className="card-title text-black" style={{ fontFamily: "Saira" }}>
+              <h2 className="card-title text-sky-600" style={{ fontFamily: "Saira" }}>
                 {course.title}
               </h2>
-              <div className="card-actions justify-between pt-8">
+              <p>{course?.description}</p>
+              <div className="card-actions justify-between pt-4">
                 <h1 className="text-[#2AAA94] font-bold text-2xl mt-2" style={{ fontFamily: "Saira" }}>
                   ${course?.price}
                 </h1>
+
                 <Link to="/course-details">
                   <button className="btn btn-primary text-white h-7">Buy Now</button>
                 </Link>
