@@ -2,12 +2,8 @@ import axios from "axios";
 import { ErrorToast, SuccessToast } from "../utility/FormHelper";
 import { getToken, setToken } from "../utility/SessionHelper";
 
-<<<<<<< HEAD
-const BASE_URL = `http://localhost:8000/api/v1`;
 // const BASE_URL = `https://edujar-lms.onrender.com/api/v1`;
-=======
-const BASE_URL = `https://edujar-lms.onrender.com/api/v1`;
->>>>>>> bd0c9f2582f3fd344a80a30e8b219eac930909d1
+const BASE_URL = `http://localhost:8000/api/v1`;
 const Headers = { headers: { token: getToken() } };
 
 // ::::::::: API: REGISTRATION API :::::::::

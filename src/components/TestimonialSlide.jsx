@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import { FreeMode, Autoplay } from "swiper/modules";
-=======
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
->>>>>>> 63a5040a4c26d85bfdf7b80715fc77d777a35740
 const TestimonialSlide = () => {
   const breakpoints = {
     // when window width is >= 390px
@@ -68,21 +60,14 @@ const TestimonialSlide = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="p-16 bg-slate-50">
-      <div className="text-center pb-3 md:pb-10">
-        <h1 className="text-3xl font-bold">
-          <span className="text-success">Testimonials</span>
-        </h1>
-=======
     <div className="bg-gradient-to-b from-slate-50 to-cyan-100 py-2 md:py-8">
       <div className="text-center pb-3 md:pb-10">
         <h2
           className="text-6xl font-bold text-center text-black tracking-wide"
-          style={{ fontFamily: "Rowdies" }}>
+          style={{ fontFamily: "Rowdies" }}
+        >
           <span className="text-[#2AAA94]">Testimonials</span>
         </h2>
->>>>>>> 63a5040a4c26d85bfdf7b80715fc77d777a35740
         <p className="font-bold">What our student say about us</p>
       </div>
       <Swiper
@@ -99,11 +84,10 @@ const TestimonialSlide = () => {
         pagination={{
           clickable: true,
         }}
-<<<<<<< HEAD
         modules={[FreeMode, Autoplay]}
       >
-        {review.map((item, i) => (
-          <SwiperSlide>
+        {review.map((item, index) => (
+          <SwiperSlide key={index}>
             <div className="block rounded-lg bg-white p-8">
               <div className="">
                 <div className="flex justify-center">
@@ -117,17 +101,6 @@ const TestimonialSlide = () => {
                 <p className="my-2 text-xl text-center font-semibold">
                   {item.name}
                 </p>
-=======
-        modules={[FreeMode, Autoplay]}>
-        {review.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="block rounded-lg bg-white p-8">
-              <div className="">
-                <div className="flex justify-center">
-                  <img src={item.image} className="rounded-full border-2" width={70} alt={item.name} />
-                </div>
-                <p className="my-2 text-xl text-center font-semibold">{item.name}</p>
->>>>>>> 63a5040a4c26d85bfdf7b80715fc77d777a35740
               </div>
               <div>
                 <p className="text-center">{item.comments}</p>

@@ -1,5 +1,5 @@
+import AboutUs from "../components/AboutUs.jsx";
 import Categories from "../components/Categories.jsx";
-import Course from "../components/course/Course.jsx";
 import CourseCard from "../components/course/CourseCard.jsx";
 import Landing from "../components/Landing.jsx";
 import SectionLast from "../components/SectionLast.jsx";
@@ -11,15 +11,12 @@ const HomePage = () => {
   return (
     <MainLayout>
       <Landing />
-      <Course />
-      <Categories />
-      <WhyLearn />
-<<<<<<< HEAD
       <CourseCard />
-=======
+      <Categories />
+      <AboutUs />
+      <WhyLearn />
       <SectionLast />
       <TestimonialSlide />
->>>>>>> bd0c9f2582f3fd344a80a30e8b219eac930909d1
     </MainLayout>
   );
 };

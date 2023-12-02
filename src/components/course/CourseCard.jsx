@@ -4,6 +4,7 @@ import { PiStudent } from "react-icons/pi";
 import { BsStarFill } from "react-icons/bs";
 import { BsStarHalf } from "react-icons/bs";
 import { BsStar } from "react-icons/bs";
+import { IoMdArrowRoundForward } from "react-icons/io";
 import { useState, useEffect } from "react";
 import CourseSkalaton from "../common/CourseSkalaton";
 import { ALL_COURSE_API_REQUEST } from "../../apiRequest/API";
@@ -78,7 +79,7 @@ const CourseCard = () => {
                     </span>
                   </div>
                   <p className="text-red-400 font-bold">${course["price"]}</p>
-                  <div className="flex items-center gap-8 my-4">
+                  <div className="flex items-center gap-8 my-4 text-slate-500">
                     <span className="flex items-center justify-center gap-2">
                       <GrChapterAdd /> 8 Lessons
                     </span>
@@ -90,6 +91,13 @@ const CourseCard = () => {
               </section>
             </Link>
           ))}
+        </div>
+        <div className="py-10 text-center">
+          <Link>
+            <button className="btn bg-[#1ab79d] text-lg text-white border-none px-8">
+              Browse more courses <IoMdArrowRoundForward />
+            </button>
+          </Link>
         </div>
       </div>
     );
