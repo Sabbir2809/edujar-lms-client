@@ -1,7 +1,7 @@
 const CourseSkalaton = () => {
   return (
     <div>
-      <div className="flex min-h-screen items-center justify-center mx-32 gap-8">
+      <div className="flex items-center justify-center mx-32 gap-8">
         <div className="w-1/3">
           <div className="max-w-sm rounded overflow-hidden shadow-lg animate-pulse">
             <div className="h-48 bg-gray-300" />
