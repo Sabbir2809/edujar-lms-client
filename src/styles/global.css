@@ -52,6 +52,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.blog-section{
+  background-image: url("../assets/blog-bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 /*Extra small devices (portrait phones, less than 576px)*/
