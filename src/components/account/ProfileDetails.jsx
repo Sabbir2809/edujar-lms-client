@@ -1,7 +1,6 @@
 import { IoMdCheckmark } from "react-icons/io";
 import { LuImagePlus } from "react-icons/lu";
 import { TbPasswordFingerprint } from "react-icons/tb";
-import TabComponent from "../Accordion/Button";
 import { Link } from 'react-router-dom';
 import React, {useState} from "react";
 
