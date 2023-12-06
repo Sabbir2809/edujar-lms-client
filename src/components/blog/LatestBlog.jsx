@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import blog1 from "../../assets/about-banner.jpg";
 import { SlCalender } from "react-icons/sl";
 import { FaRegComments } from "react-icons/fa6";
+=======
+import { FaRegComments } from "react-icons/fa6";
+import { SlCalender } from "react-icons/sl";
+import blog1 from "../../assets/about-banner.jpg";
+
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
 const LatestBlog = () => {
   return (
     <div className="pt-10 pb-52 md:pt-20 mt-6 blog-section">

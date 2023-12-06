@@ -2,8 +2,7 @@ import axios from "axios";
 import { ErrorToast, SuccessToast } from "../utility/FormHelper";
 import { getToken, setToken } from "../utility/SessionHelper";
 
-// const BASE_URL = `https://edujar-lms.onrender.com/api/v1`;
-const BASE_URL = `http://localhost:8000/api/v1`;
+const BASE_URL = `https://edujar-lms-server.onrender.com/api/v1`;
 const Headers = { headers: { token: getToken() } };
 
 // ::::::::: API: REGISTRATION API :::::::::
@@ -79,7 +78,7 @@ export const COURSE_BY_CATEGORY_REQUEST = async (categoryID) => {
       `${BASE_URL}/course-by-category/` + categoryID
     );
     if (data.success) {
-      return data;
+      return data.data;
     }
     return data;
   } catch (error) {

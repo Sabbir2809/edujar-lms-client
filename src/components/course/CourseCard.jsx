@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { CiClock2 } from "react-icons/ci";
 import { GrChapterAdd } from "react-icons/gr";
 import { PiStudent } from "react-icons/pi";
@@ -9,6 +10,17 @@ import { useState, useEffect } from "react";
 import CourseSkalaton from "../common/CourseSkalaton";
 import { ALL_COURSE_API_REQUEST } from "../../apiRequest/API";
 import { Link } from "react-router-dom";
+=======
+import { useEffect, useState } from "react";
+import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
+import { CiClock2 } from "react-icons/ci";
+import { GrChapterAdd } from "react-icons/gr";
+import { IoMdArrowRoundForward } from "react-icons/io";
+import { PiStudent } from "react-icons/pi";
+import { Link } from "react-router-dom";
+import { ALL_COURSE_API_REQUEST } from "../../apiRequest/API";
+import CourseSkeleton from "../common/CourseSkeleton";
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
 
 const CourseCard = () => {
   const [courses, SetAllCourses] = useState([]);
@@ -20,6 +32,11 @@ const CourseCard = () => {
     })();
   }, []);
 
+<<<<<<< HEAD
+=======
+  console.log(courses);
+
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
   const star = 5;
   const stars = Array.from({ length: 7 }, (_, index) => {
     const halfNumber = index + 0.5;
@@ -36,18 +53,27 @@ const CourseCard = () => {
       </span>
     );
   });
+<<<<<<< HEAD
   if (courses.length > 0) {
+=======
+  if (courses?.length > 0) {
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
     return (
       <div className=" bg-[#f5f1eb] px-32 py-9">
         <div className="text-center py-16">
           <p className="font-bold">POPULAR COURSES</p>
+<<<<<<< HEAD
           <h1 className="text-7xl text-black font-bold">
             Pick A Course To Get Started
           </h1>
+=======
+          <h1 className="text-7xl text-black font-bold">Pick A Course To Get Started</h1>
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
         </div>
 
         <div className="grid md:grid-cols-3 gap-7 justify-center">
           {courses.map((course) => (
+<<<<<<< HEAD
             <Link to={`/course-details/${course["_id"]}`}>
               <section
                 key={course["_id"]}
@@ -56,6 +82,13 @@ const CourseCard = () => {
                 <div className="relative overflow-hidden">
                   <img
                     src={course.thumbnail.map((url) => url.url)}
+=======
+            <Link key={course["_id"]} to={`/course-details/${course["_id"]}`}>
+              <section className="w-[350px] hover:shadow-xl transition duration-600 cursor-pointer">
+                <div className="relative overflow-hidden">
+                  <img
+                    src={course?.thumbnail.map((url) => url.url)}
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
                     alt=""
                     className="h-64 w-full hover:scale-110 transition duration-500 cursor-pointer"
                   />
@@ -74,9 +107,13 @@ const CourseCard = () => {
 
                   <div className="flex items-center gap-3 mb-3">
                     <div className="flex">{stars}</div>{" "}
+<<<<<<< HEAD
                     <span className="font-semibold tracking-wide">
                       (5.0/7 Ratings)
                     </span>
+=======
+                    <span className="font-semibold tracking-wide">(5.0/7 Ratings)</span>
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
                   </div>
                   <p className="text-red-400 font-bold">${course["price"]}</p>
                   <div className="flex items-center gap-8 my-4 text-slate-500">
@@ -106,11 +143,17 @@ const CourseCard = () => {
       <div className="bg-[#f5f1eb] py-9">
         <div className="text-center py-16">
           <p className="font-bold">POPULAR COURSES</p>
+<<<<<<< HEAD
           <h1 className="text-7xl text-black font-bold">
             Pick A Course To Get Started
           </h1>
         </div>
         <CourseSkalaton />;
+=======
+          <h1 className="text-7xl text-black font-bold">Pick A Course To Get Started</h1>
+        </div>
+        <CourseSkeleton />;
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
       </div>
     );
   }

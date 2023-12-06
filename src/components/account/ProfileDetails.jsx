@@ -12,8 +12,8 @@ const ProfileDetails = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-slate-50 to-gray-50">
-      <div className="mx-auto max-w-screen-2xl gap-10 px-12 pt-14 ">
+    <div className="bg-gradient-to-r from-slate-50 to-gray-100 pb-10">
+      <div className="mx-auto max-w-screen-2xl gap-10 px-12 pt-24 ">
         <div className="border rounded p-1 shadow-lg h-[100%] w-full mt-10 flex justify-start items-center gap-10 bg-gray-200">
           <Link
             to=""

@@ -12,7 +12,11 @@ html,
 body {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background-color: white ! important
+=======
+  background-color: white !important;
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
 }
 
 .btn1 {
@@ -46,20 +50,31 @@ body {
   justify-content: center;
   padding: 0px 100px;
 }
+<<<<<<< HEAD
 .about-banners{
+=======
+.about-banners {
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
   background-image: url("../assets/about-shape-3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+<<<<<<< HEAD
 .blog-section{
+=======
+.blog-section {
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
   background-image: url("../assets/blog-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
   .video_layout {

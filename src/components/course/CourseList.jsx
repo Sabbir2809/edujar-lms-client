@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { CiClock2 } from "react-icons/ci";
 import { GrChapterAdd } from "react-icons/gr";
@@ -5,6 +6,13 @@ import { PiStudent } from "react-icons/pi";
 import { BsStarFill } from "react-icons/bs";
 import { BsStarHalf } from "react-icons/bs";
 import { BsStar } from "react-icons/bs";
+=======
+import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
+import { CiClock2 } from "react-icons/ci";
+import { GrChapterAdd } from "react-icons/gr";
+import { PiStudent } from "react-icons/pi";
+import { Link } from "react-router-dom";
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
 
 const CourseList = ({ course }) => {
   const star = 5;
@@ -27,11 +35,16 @@ const CourseList = ({ course }) => {
     <div className="bg-[#f5f1eb] md:mt-16 px-32 py-9">
       <div className="grid md:grid-cols-3 gap-4 justify-center">
         {course.map((item) => (
+<<<<<<< HEAD
           <Link to={`/course-details/${item["_id"]}`}>
             <section
               key={item["_id"]}
               className="w-[350px] hover:shadow-xl transition duration-600 cursor-pointer"
             >
+=======
+          <Link key={item["_id"]} to={`/course-details/${item["_id"]}`}>
+            <section className="w-[350px] hover:shadow-xl transition duration-600 cursor-pointer">
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
               <div className="relative overflow-hidden">
                 <img
                   src={item.thumbnail.map((url) => url.url)}
@@ -53,9 +66,13 @@ const CourseList = ({ course }) => {
 
                 <div className="flex items-center gap-3 mb-3">
                   <div className="flex">{stars}</div>{" "}
+<<<<<<< HEAD
                   <span className="font-semibold tracking-wide">
                     (5.0/7 Ratings)
                   </span>
+=======
+                  <span className="font-semibold tracking-wide">(5.0/7 Ratings)</span>
+>>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
                 </div>
                 <p className="text-red-400 font-bold">${item["price"]}</p>
                 <div className="flex items-center gap-8 my-4">
