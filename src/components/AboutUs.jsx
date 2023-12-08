@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-import aboutBanner from "../assets/about-banner.jpg";
-import aboutShape1 from "../assets/about-shape-1.svg";
-import aboutShape2 from "../assets/about-shape-2.svg";
-import aboutShape3 from "../assets/about-shape-3.png";
-import aboutShape4 from "../assets/about-shape-4.svg";
-import { FaCheckDouble } from "react-icons/fa6";
-import "../styles/global.css";
-=======
 import { FaCheckDouble } from "react-icons/fa6";
 import aboutBanner from "../assets/about-banner.jpg";
 import aboutShape1 from "../assets/about-shape-1.svg";
 import aboutShape2 from "../assets/about-shape-2.svg";
 
->>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
 const AboutUs = () => {
   return (
     <section className="section py-5 md:py-20">
@@ -29,12 +19,11 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="about-content pl-20">
-          <div>
+        <div className="about-content">
+          <div className=" px-12">
             <p className="font-bold pb-3">About Us</p>
 
             <h2 className="text-black text-9xl font-bold pb-3">
-<<<<<<< HEAD
               Over 10 Years in{" "}
               <span className="text-orange-500">Distant learning</span> for
               Skill Development
@@ -43,14 +32,6 @@ const AboutUs = () => {
             <p className="pb-3">
               Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod
               ex tempor incididunt labore dolore magna aliquaenim ad minim.
-=======
-              Over 10 Years in <span className="text-orange-500">Distant learning</span> for Skill Development
-            </h2>
-
-            <p className="pb-3">
-              Lorem ipsum dolor sit amet consectur adipiscing elit sed eiusmod ex tempor incididunt labore
-              dolore magna aliquaenim ad minim.
->>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
             </p>
 
             <ul className="about-list">

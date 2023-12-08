@@ -7,25 +7,32 @@ import HeroShape2 from "../assets/hero-shape-2.png";
 const Landing = () => {
   return (
     <section
-      className="w-[100%] md:h-screen h-[50%] bg-no-repeat bg-cover object-cover grid grid-cols-1 md:grid-cols-2"
-      style={{ backgroundImage: `url(${HeroBG})` }}>
+      className="md:h-[100%] h-[50%] bg-no-repeat bg-cover object-cover grid grid-cols-1 md:grid-cols-2"
+      style={{ backgroundImage: `url(${HeroBG})` }}
+    >
       <div className="mx-auto max-w-7xl md:py-64 md:pl-20 py-40 px-8">
         <h1
           className="text-10xl font-semibold tracking-wide text-black md:block hidden"
-          style={{ fontFamily: "League Spartan" }}>
-          The Best Program <br /> to <span className="text-red-400">Enroll</span> for <br /> Exchange
+          style={{ fontFamily: "League Spartan" }}
+        >
+          The Best Program <br /> to{" "}
+          <span className="text-red-400">Enroll</span> for <br /> Exchange
         </h1>
 
         <h1
           className="text-8xl font-bold tracking-wide text-black md:hidden"
-          style={{ fontFamily: "League Spartan" }}>
-          The Best Program to <span className="text-red-400">Enroll</span> for Exchange
+          style={{ fontFamily: "League Spartan" }}
+        >
+          The Best Program to <span className="text-red-400">Enroll</span> for
+          Exchange
         </h1>
 
         <p
           className="md:text-[18px] text-[14px] font-light text-black pt-5"
-          style={{ fontFamily: "Poppins" }}>
-          Excepteur sint occaecat cupidatat non proident sunt in <br /> culpa qui officia deserunt mollit.
+          style={{ fontFamily: "Poppins" }}
+        >
+          Excepteur sint occaecat cupidatat non proident sunt in <br /> culpa
+          qui officia deserunt mollit.
         </p>
 
         <div>

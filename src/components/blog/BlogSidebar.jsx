@@ -5,13 +5,9 @@ const BlogSidebar = () => {
     <div>
       <div className="bg-white p-3 grid grid-cols-3 gap-2 mb-3 rounded-md">
         <img src={image} alt="" />
-<<<<<<< HEAD
         <span className="col-span-2">
           Related post title Related post titleRelated post title
         </span>
-=======
-        <span className="col-span-2">Related post title Related post titleRelated post title</span>
->>>>>>> 509bba576d4523ef9edc15853d4d4816aef8afcd
       </div>
     </div>
   );

@@ -9,8 +9,6 @@ import LessonModulePage from "./pages/LessonModulePage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import RegistrationPage from "./pages/RegistrationPage.jsx";
-import CategoryCoursePage from "./pages/CategoryCoursePage.jsx";
-import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
 
 const App = () => {
   return (
@@ -29,7 +27,10 @@ const App = () => {
         />
         <Route path="/blog-details" element={<BlogDetailsPage />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/course-by-category/:id" element={<CategoryCoursePage />} />
+        <Route
+          path="/course-by-category/:id"
+          element={<CategoryCoursePage />}
+        />
         <Route path="/blog-details" element={<BlogDetailsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
