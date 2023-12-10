@@ -76,7 +76,7 @@ const LessonModule = () => {
         >
           {lessonData.map((lesson) => (
             <Accordion.Panel key={lesson._id}>
-              <Accordion.Title>{lesson.lessonTitle}</Accordion.Title>
+              <Accordion.Title>{lesson.title}</Accordion.Title>
               <Accordion.Content>
                 <ul>
                   {lesson.videos.map((video, i) => (

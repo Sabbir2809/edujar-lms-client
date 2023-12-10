@@ -94,7 +94,7 @@ const ProfileDetails = () => {
           activeTab === "Ebad 2" ? "block" : "hidden"
         }`}
       >
-        <section className="border rounded p-4 shadow-lg h-[100%] w-full mt-10">
+        <section className=" rounded p-4 shadow-lg h-[100%] w-full mt-10 bg-white">
           <div>
             <h1
               className="text-2xl font-bold text-gray-700 mb-4 text-center"
@@ -136,7 +136,7 @@ const ProfileDetails = () => {
                 type="text"
                 id="fullName"
                 placeholder="Full Name"
-                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
                 style={{ fontFamily: "Poppins", fontWeight: "400" }}
               />
 
@@ -151,7 +151,7 @@ const ProfileDetails = () => {
                 type="text"
                 id="fullName"
                 placeholder="Full Name"
-                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
                 style={{ fontFamily: "Poppins", fontWeight: "400" }}
               />
 
@@ -166,7 +166,7 @@ const ProfileDetails = () => {
                 type="text"
                 id="fullName"
                 placeholder="Full Name"
-                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
                 style={{ fontFamily: "Poppins", fontWeight: "400" }}
               />
 
@@ -181,7 +181,7 @@ const ProfileDetails = () => {
                 type="text"
                 id="fullName"
                 placeholder="Full Name"
-                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
                 style={{ fontFamily: "Poppins", fontWeight: "400" }}
               />
 
@@ -197,7 +197,7 @@ const ProfileDetails = () => {
           </div>
         </section>
 
-        <section className="border rounded p-4 shadow-xl md:h-[70%] h-[95%] w-full mt-10">
+        <section className="bg-white rounded p-4 shadow-xl md:h-[70%] h-[95%] w-full mt-10">
           <div>
             <h1
               className="text-2xl font-bold text-gray-700 mb-4 text-center"
