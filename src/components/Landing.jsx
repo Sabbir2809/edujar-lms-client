@@ -9,7 +9,7 @@ const Landing = () => {
     <section
       className="w-[100%] md:h-screen h-[50%] bg-no-repeat bg-cover object-cover grid grid-cols-1 md:grid-cols-2"
       style={{ backgroundImage: `url(${HeroBG})` }}>
-      <div className="mx-auto max-w-7xl md:py-64 md:pl-20 py-40 px-8">
+      <div className="mx-auto py-40">
         <h1
           className="text-10xl font-semibold tracking-wide text-black md:block hidden"
           style={{ fontFamily: "League Spartan" }}>
@@ -22,19 +22,14 @@ const Landing = () => {
           The Best Program to <span className="text-red-400">Enroll</span> for Exchange
         </h1>
 
-        <p
-          className="md:text-[18px] text-[14px] font-light text-black pt-5"
-          style={{ fontFamily: "Poppins" }}>
+        <p className="md:text-[18px] text-[14px] font-light text-black " style={{ fontFamily: "Poppins" }}>
           Excepteur sint occaecat cupidatat non proident sunt in <br /> culpa qui officia deserunt mollit.
         </p>
 
-        <div>
-          <button className="border-2 rounded-[8px] border-black text-black p-3 font-bold mt-12 tracking-widest hover:bg-black hover:text-white transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-11 duration-300">
-            View Courses
-          </button>
-        </div>
+        <button className="border-2 rounded-[8px] border-black text-black p-3 font-bold mt-6 tracking-widest hover:bg-black hover:text-white transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-11 duration-300">
+          View Courses
+        </button>
       </div>
-
       <div>
         <div className="md:w-[85%] md:h-[60%] my-44 mr-20  md:block hidden">
           <img className="object-cover" src={HeroShape2} alt="Features Img" />
