@@ -39,7 +39,7 @@ const Login = () => {
     }
   };
   return (
-    <div className="w-screen h-[100vh] bg-white flex items-center justify-center px-5 py-5">
+    <div className="w-screen h-[100vh] bg-white flex items-center justify-center px-5 py-5 mt-10">
       {isLoading ? (
         <Loading />
       ) : (

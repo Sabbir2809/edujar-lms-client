@@ -26,22 +26,22 @@ const CourseList = ({ course }) => {
       <div className="grid md:grid-cols-3 gap-4 justify-center">
         {course.map((item) => (
           <Link key={item["_id"]} to={`/course-details/${item["_id"]}`}>
-            <section className="w-[350px] hover:shadow-xl transition duration-600 cursor-pointer">
+            <div className="w-[350px] hover:shadow-xl transition duration-600 cursor-pointer">
               <div className="relative overflow-hidden">
                 <img
                   src={item.thumbnail.map((url) => url.url)}
                   alt=""
-                  className="h-64 w-full hover:scale-110 transition duration-500 cursor-pointer"
+                  className="h-100 w-full hover:scale-110 transition duration-500 cursor-pointer"
                 />
                 <span className="absolute top-2 right-3 bg-[#F8B720] p-1 px-2 text-white rounded-sm flex items-center justify-center font-semibold gap-1">
-                  <CiClock2 size="15px" /> 3 Weeks
+                  <CiClock2 size="15px" /> {item["courseDuration"]} Month
                 </span>
               </div>
 
               <div className="bg-white px-4 py-3">
-                {/* <p className="bg-green-50 inline p-2 rounded-md text-green-600 font-semibold">
-                Beginner
-              </p> */}
+                <p className="bg-green-50 inline p-2 rounded-md text-green-600 font-semibold">
+                  {item["courseLevel"]}
+                </p>
                 <h1 className="text-xl text-slate-700 font-bold my-3 hover:text-green-300  transition duration-200">
                   {item["title"]}
                 </h1>
@@ -60,7 +60,7 @@ const CourseList = ({ course }) => {
                   </span>
                 </div>
               </div>
-            </section>
+            </div>
           </Link>
         ))}
       </div>
