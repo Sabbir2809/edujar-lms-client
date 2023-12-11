@@ -12,9 +12,7 @@ const CourseDetails = () => {
       const data = await COURSE_DETAILS_API_REQUEST(id);
       setCourseInfo(data);
     })();
-  }, []);
-
-  console.log(courseInfo);
+  }, [id]);
 
   return (
     <div className="bg-white mt-10">
