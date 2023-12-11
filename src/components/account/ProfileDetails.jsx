@@ -3,6 +3,7 @@ import { LuImagePlus } from "react-icons/lu";
 import { TbPasswordFingerprint } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 import React, {useState} from "react";
+import HeroBG from '../../assets/hero-bg.svg';
 
 const ProfileDetails = () => {
 
@@ -14,11 +15,11 @@ const ProfileDetails = () => {
     };
 
   return (
-    <div className="bg-gradient-to-r from-slate-50 to-gray-100 pb-10">
-      <div className='mx-auto max-w-screen-2xl gap-10 px-12 pt-24 '>
+    <div className="h-[100%] w-[100%] bg-cover object-cover pb-10 bg-[#FAFAF9]" style={{  }}>
+      <div className='mx-auto max-w-screen-2xl gap-10 px-12 pt-10 '>
 
 
-        <div className='border rounded p-1 shadow-lg h-[100%] w-full mt-10 flex justify-start items-center gap-10 bg-gray-200'>
+        <div className='border rounded p-1 shadow-lg h-[100%] w-full mt-10 flex justify-center items-center gap-10 bg-gray-200'>
           <Link
               to=''
               className={`shrink-0 border-b-2 ${
@@ -68,7 +69,7 @@ const ProfileDetails = () => {
 
 
 
-      <div className={`mx-auto max-w-screen-2xl gap-10 px-12 py-2 grid md:grid-cols-2 grid-cols-1 ${activeTab === 'Ebad 2' ? 'block' : 'hidden'}`}>
+      <div className={`mx-auto max-w-screen-2xl gap-10 px-12 py-4 grid md:grid-cols-2 grid-cols-1 ${activeTab === 'Ebad 2' ? 'block' : 'hidden'}`}>
 
         <section className="border rounded p-4 shadow-lg h-[100%] w-full mt-10">
           <div>
@@ -89,52 +90,60 @@ const ProfileDetails = () => {
               </button>
             </div>
 
-            <div className="mt-11 h-full">
-              <label htmlFor="fullName" className="text-[15px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
-                Full Name
-              </label>
-              <input
-                type="text"
-                id="fullName"
-                placeholder="Full Name"
-                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
-                style={{ fontFamily: 'Poppins', fontWeight: '400' }}
-              />
-
-              <label htmlFor="fullName" className="text-[15px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
+            <div className="mt-11 h-full w-full grid grid-cols-2 gap-5">
+            <div>
+              <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
                 Full Name
               </label>
               <input
                   type="text"
                   id="fullName"
                   placeholder="Full Name"
-                  className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                  className="input input-bordered w-full max-w-2xl   text-gray-400 text-md bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
                   style={{ fontFamily: 'Poppins', fontWeight: '400' }}
               />
+            </div>
 
-              <label htmlFor="fullName" className="text-[15px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
-                Full Name
-              </label>
-              <input
-                  type="text"
-                  id="fullName"
-                  placeholder="Full Name"
-                  className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
-                  style={{ fontFamily: 'Poppins', fontWeight: '400' }}
-              />
+             <div>
+               <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
+                 Full Name
+               </label>
+               <input
+                   type="text"
+                   id="fullName"
+                   placeholder="Full Name"
+                   className="input input-bordered w-full max-w-2xl   text-gray-400  text-md bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                   style={{ fontFamily: 'Poppins', fontWeight: '400' }}
+               />
+             </div>
 
-              <label htmlFor="fullName" className="text-[15px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
-                Full Name
-              </label>
-              <input
-                  type="text"
-                  id="fullName"
-                  placeholder="Full Name"
-                  className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
-                  style={{ fontFamily: 'Poppins', fontWeight: '400' }}
-              />
+              <div>
+                <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
+                  Full Name
+                </label>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Full Name"
+                    className="input input-bordered w-full max-w-2xl   text-gray-400 text-md bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                    style={{ fontFamily: 'Poppins', fontWeight: '400' }}
+                />
+              </div>
 
-              <div className="flex justify-end">
+              <div>
+                <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
+                  Full Name
+                </label>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Full Name"
+                    className="input input-bordered w-full max-w-2xl   text-gray-400  text-md bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                    style={{ fontFamily: 'Poppins', fontWeight: '400' }}
+                />
+              </div>
+
+              <div className=" items-center justify-center flex col-span-2 ">
                 <button className="p-3 rounded bg-blueGray-700 text-white mt-5 text-center flex justify-center items-center gap-2 hover:bg-blueGray-900 font-semibold" style={{ fontFamily: 'Saira' }}>
                   Save Changes <IoMdCheckmark />{" "}
                 </button>
@@ -143,46 +152,54 @@ const ProfileDetails = () => {
           </div>
         </section>
 
-        <section className="border rounded p-4 shadow-xl md:h-[70%] h-[95%] w-full mt-10">
+        <section className="border rounded p-4 shadow-xl md:h-[70%] h-[95%] w-full md:mt-36 mt-10">
           <div>
-            <h1 className="text-2xl font-bold text-gray-700 mb-4 text-center"  style={{ fontFamily: 'Saira' }}>Change Password</h1>
+            <h1 className="text-2xl font-bold text-gray-700 mb-0 text-center"  style={{ fontFamily: 'Saira' }}>Change Password</h1>
 
-            <TbPasswordFingerprint className="w-36 h-44 mx-auto mt-10 text-gray-700" />
+            <TbPasswordFingerprint className="w-36 h-44 mx-auto mt-0 mb-2 text-gray-700" />
           </div>
 
-          <div>
-            <label htmlFor="fullName" className="text-[15px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
-              Full Name
-            </label>
-            <input
-                type="text"
-                id="fullName"
-                placeholder="Full Name"
-                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
-                style={{ fontFamily: 'Poppins', fontWeight: '400' }}
-            />
+          <div className='grid grid-cols-2 gap-5'>
 
-            <label htmlFor="fullName" className="text-[15px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
-              Full Name
-            </label>
-            <input
-                type="text"
-                id="fullName"
-                placeholder="Full Name"
-                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
-                style={{ fontFamily: 'Poppins', fontWeight: '400' }}
-            />
+            <div>
+              <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
+                Full Name
+              </label>
+              <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Full Name"
+                  className="input input-bordered w-full max-w-2xl   text-gray-400  text-md bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                  style={{ fontFamily: 'Poppins', fontWeight: '400' }}
+              />
+            </div>
 
-            <label htmlFor="fullName" className="text-[15px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
-              Full Name
-            </label>
-            <input
-                type="text"
-                id="fullName"
-                placeholder="Full Name"
-                className="input input-bordered w-full max-w-2xl   text-gray-400 mb-10 text-lg bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
-                style={{ fontFamily: 'Poppins', fontWeight: '400' }}
-            />
+
+            <div>
+              <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
+                Full Name
+              </label>
+              <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Full Name"
+                  className="input input-bordered w-full max-w-2xl   text-gray-400  text-md bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                  style={{ fontFamily: 'Poppins', fontWeight: '400' }}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="fullName" className="text-[13px] font-semibold text-gray-800 tracking-wide" style={{ fontFamily: 'Poppins', fontWeight: '600' }}>
+                Full Name
+              </label>
+              <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Full Name"
+                  className="input input-bordered w-full max-w-2xl   text-gray-400  text-md bg-white mt-2 hover:ring ring-black ring-offset-base-100 ring-offset-3 tracking-wider"
+                  style={{ fontFamily: 'Poppins', fontWeight: '400' }}
+              />
+            </div>
           </div>
         </section>
       </div>

@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full sm:w-screen md:w-full lg:w-screen h-[66px] bg-slate-50  pl-1 md:pl-10 lg:pl-36 md:pr-10 lg:pr-36 flex items-center justify-between fixed top-0 z-40">
+    <nav className="w-full sm:w-screen md:w-full lg:w-screen h-[66px] bg-white shadow-lg  pl-1 md:pl-10 lg:pl-36 md:pr-10 lg:pr-36 flex items-center justify-between fixed top-0 z-40">
       <div className="flex items-center overflow-hidden">
         {/* Mobile View */}
         <div className="drawer drawer-mobile md:hidden pl-1 overflow-auto">
