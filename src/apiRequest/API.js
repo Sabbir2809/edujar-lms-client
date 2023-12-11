@@ -2,7 +2,7 @@ import axios from "axios";
 import { ErrorToast, SuccessToast } from "../utility/FormHelper";
 import { getToken, setToken } from "../utility/SessionHelper";
 
-const BASE_URL = `http://localhost:8000/api/v1`;
+const BASE_URL = `https://edujar-lms-server.onrender.com/api/v1`;
 const Headers = { headers: { token: getToken() } };
 
 // ::::::::: API: REGISTRATION API :::::::::
@@ -66,6 +66,45 @@ export const GET_MODULE_LESSON_API_REQUEST = async () => {
     if (data.success) {
       return data;
     }
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: course by category :::::::::
+export const COURSE_BY_CATEGORY_API_REQUEST = async (categoryID) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/course-by-category/${categoryID}`);
+    if (data.success) {
+      return data.data;
+    }
+    return data;
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: course by category :::::::::
+export const COURSE_DETAILS_API_REQUEST = async (courseId) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/course-details/${courseId}`);
+    if (data.success) {
+      return data.data;
+    }
+    return data;
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: all-notification :::::::::
+export const GET_ALL_NOTIFICATION_REQUEST = async () => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/get-all-notification`);
+    if (data.success) {
+      return data.data;
+    }
+    return data;
   } catch (error) {
     return [];
   }

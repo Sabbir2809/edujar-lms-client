@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NotFound from "./components/common/NotFound.jsx";
+import BlogDetailsPage from "./pages/BlogDetailsPage.jsx";
+import CategoryCoursePage from "./pages/CategoryCoursePage.jsx";
 import CourseDetailsPage from "./pages/CourseDetailsPage.jsx";
 import ForgetPasswordPage from "./pages/ForgetPasswordPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -16,9 +18,12 @@ const App = () => {
           <Route path="/registration" element={<RegistrationPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/forget-password" element={<ForgetPasswordPage />} />
-          <Route path="/course-details" element={<CourseDetailsPage />} />
           <Route path="/my-courses" element={<LessonModulePage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/course-details/:id" element={<CourseDetailsPage />} />
+          <Route path="/course-by-category/:id" element={<CategoryCoursePage />} />
+          <Route path="/blog-details" element={<BlogDetailsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

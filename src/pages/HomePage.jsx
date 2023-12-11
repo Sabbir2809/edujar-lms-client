@@ -1,16 +1,20 @@
+import AboutUs from "../components/AboutUs.jsx";
+import LatestBlog from "../components/blog/LatestBlog.jsx";
 import Categories from "../components/Categories.jsx";
-import Course from "../components/course/Course.jsx";
+import CourseCard from "../components/course/CourseCard.jsx";
 import Landing from "../components/Landing.jsx";
-import WhyLearn from "../components/WhyLearn.jsx";
+import Reputation from "../components/Reputation.jsx";
 import MainLayout from "../layout/MainLayout.jsx";
 
 const HomePage = () => {
   return (
     <MainLayout>
       <Landing />
-      <Course />
+      <CourseCard />
       <Categories />
-      <WhyLearn />
+      <AboutUs />
+      <Reputation />
+      <LatestBlog />
     </MainLayout>
   );
 };
