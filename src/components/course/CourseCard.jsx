@@ -36,8 +36,7 @@ const CourseCard = () => {
   });
   if (courses?.length > 0) {
     return (
-<<<<<<< HEAD
-      <div className="section bg-[#f5f1eb] md:px-32 px-12 py-9">
+      <div className="section md:px-32 px-12 py-9">
         <div className="text-center py-16">
           <p className="font-bold">POPULAR COURSES</p>
           <h1 className="text-xl md:text-7xl text-black font-bold">
@@ -45,19 +44,10 @@ const CourseCard = () => {
           </h1>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-7">
-=======
-      <div className="section md:px-32 px-12 py-9">
-        <div className="text-center py-16">
-          <p className="font-bold">POPULAR COURSES</p>
-          <h1 className="text-xl md:text-7xl text-black font-bold">Pick A Course To Get Started</h1>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-7 ">
->>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
           {courses.map((course) => (
             <Link key={course["_id"]} to={`/course-details/${course["_id"]}`}>
-              <section className="hover:shadow-xl transition duration-600 cursor-pointer">
+              <section className="border rounded hover:shadow-xl transition duration-600 cursor-pointer">
                 <div className="relative overflow-hidden">
                   <img
                     src={course?.thumbnail.map((url) => url.url)}
@@ -69,10 +59,10 @@ const CourseCard = () => {
                   </span>
                 </div>
 
-                <div className="bg-white px-4 py-3 h-auto">
-                  {/* <p className="bg-green-50 inline p-2 rounded-md text-green-600 font-semibold">
-                  Beginner
-                </p> */}
+                <div className=" h-[250px] px-4 py-3">
+                  <p className="bg-green-50 inline p-2 rounded-md text-green-600 font-semibold">
+                    {course["courseLevel"]}
+                  </p>
                   <h1 className="text-xl text-slate-700 font-bold my-3 hover:text-green-300  transition duration-200">
                     {course["title"]}
                   </h1>
@@ -98,7 +88,7 @@ const CourseCard = () => {
           ))}
         </div>
         <div className="py-10 text-center">
-          <Link>
+          <Link to="/all-courses">
             <button className="btn bg-[#1ab79d] md:text-lg text-white border-none px-8">
               Browse more courses <IoMdArrowRoundForward />
             </button>

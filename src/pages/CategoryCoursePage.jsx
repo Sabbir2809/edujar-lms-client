@@ -10,11 +10,7 @@ const CategoryCoursePage = () => {
   const [course, setCourse] = useState([]);
   useEffect(() => {
     (async () => {
-<<<<<<< HEAD
-      const data = await COURSE_BY_CATEGORY_REQUEST(id);
-=======
       const data = await COURSE_BY_CATEGORY_API_REQUEST(id);
->>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
       setCourse(data);
     })();
   }, []);

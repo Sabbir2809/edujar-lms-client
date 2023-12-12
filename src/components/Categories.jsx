@@ -28,14 +28,10 @@ const Categories = () => {
           <Link key={category._id} to={`course-by-category/${category["_id"]}`}>
             <Card className="h-[220px] hover:border-green-300 hover:bg-white hover:shadow-xl hover:transition duration-200 cursor-pointer ease-in-out bg-slate-50">
               <Card.Container className="flex items-center justify-center pt-5">
-<<<<<<< HEAD
                 <Notification
                   className="bg-green-500 text-slate-50 p-4 rounded"
                   size={60}
                 />
-=======
-                <Notification className="bg-green-500 text-slate-50 p-4 rounded" size={60} />
->>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
               </Card.Container>
               <Card.Container className="text-center">
                 <Card.Title>{category.categoryName}</Card.Title>

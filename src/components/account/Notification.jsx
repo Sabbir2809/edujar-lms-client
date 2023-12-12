@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import { GET_ALL_NOTIFICATION_REQUEST } from "../../apiRequest/API";
-import { Link } from "react-router-dom";
-=======
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { GET_ALL_NOTIFICATION_REQUEST } from "../../apiRequest/API";
->>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
 
 const Notification = () => {
   const [notification, setNotification] = useState([]);
@@ -26,7 +20,6 @@ const Notification = () => {
               ? notification.map((item) => (
                   <li
                     key={item["_id"]}
-<<<<<<< HEAD
                     className="flex justify-between px-4 py-2 w-full bg-white hover:bg-sky-100 hover:text-sky-900 border-b last:border-none border-gray-200 transition-all duration-300 ease-in-out"
                   >
                     {item["title"]}
@@ -34,13 +27,6 @@ const Notification = () => {
                       to={"notification-details/" + item["_id"]}
                       className="btn btn-xs bg-green-400 text-white border-none"
                     >
-=======
-                    className="flex justify-between px-4 py-2 w-full bg-white hover:bg-sky-100 hover:text-sky-900 border-b last:border-none border-gray-200 transition-all duration-300 ease-in-out">
-                    {item["title"]}
-                    <Link
-                      to={"notification-details/" + item["_id"]}
-                      className="btn btn-xs bg-green-400 text-white border-none">
->>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
                       See More
                     </Link>
                   </li>
