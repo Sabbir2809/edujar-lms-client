@@ -109,3 +109,28 @@ export const GET_ALL_NOTIFICATION_REQUEST = async () => {
     return [];
   }
 };
+
+// ::::::::: API: Get All Blogs :::::::::
+export const GET_ALL_BLOGS_API_REQUEST = async () => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/blogs`);
+    if (data.success) {
+      return data.data;
+    }
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: Single blog :::::::::
+export const BLOG_DETAILS_API_REQUEST = async (id) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/blogs/${id}`);
+    if (data.success) {
+      return data.data;
+    }
+    return data;
+  } catch (error) {
+    return [];
+  }
+};

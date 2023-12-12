@@ -22,7 +22,7 @@ const CourseList = ({ course }) => {
     );
   });
   return (
-    <div className="bg-[#f5f1eb] md:mt-16 px-32 py-9">
+    <div className="bg-[#f5f1eb] md:mt-10 md:px-32 py-9">
       <div className="grid md:grid-cols-3 gap-4 justify-center">
         {course.map((item) => (
           <Link key={item["_id"]} to={`/course-details/${item["_id"]}`}>
@@ -31,27 +31,27 @@ const CourseList = ({ course }) => {
                 <img
                   src={item.thumbnail.map((url) => url.url)}
                   alt=""
-                  className="h-100 w-full hover:scale-110 transition duration-500 cursor-pointer"
+                  className="w-full hover:scale-110 transition duration-500 cursor-pointer"
                 />
                 <span className="absolute top-2 right-3 bg-[#F8B720] p-1 px-2 text-white rounded-sm flex items-center justify-center font-semibold gap-1">
                   <CiClock2 size="15px" /> {item["courseDuration"]} Month
                 </span>
               </div>
 
-              <div className="bg-white px-4 py-3">
-                <p className="bg-green-50 inline p-2 rounded-md text-green-600 font-semibold">
+              <div className="bg-white  h-[220px]  px-4 py-3">
+                <p className="bg-green-50 inline p-1 rounded-md text-green-600 font-semibold">
                   {item["courseLevel"]}
                 </p>
-                <h1 className="text-xl text-slate-700 font-bold my-3 hover:text-green-300  transition duration-200">
+                <h1 className="text-lg text-slate-700 font-bold my-2 hover:text-green-300  transition duration-200">
                   {item["title"]}
                 </h1>
 
-                <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center gap-3 mb-2">
                   <div className="flex">{stars}</div>{" "}
                   <span className="font-semibold tracking-wide">(5.0/7 Ratings)</span>
                 </div>
                 <p className="text-red-400 font-bold">${item["price"]}</p>
-                <div className="flex items-center gap-8 my-4">
+                <div className="flex gap-8 my-4">
                   <span className="flex items-center justify-center gap-2">
                     <GrChapterAdd /> 8 Lessons
                   </span>

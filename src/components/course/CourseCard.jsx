@@ -45,7 +45,7 @@ const CourseCard = () => {
         <div className="grid md:grid-cols-3 gap-7 ">
           {courses.map((course) => (
             <Link key={course["_id"]} to={`/course-details/${course["_id"]}`}>
-              <section className="hover:shadow-xl transition duration-600 cursor-pointer">
+              <section className="border rounded hover:shadow-xl transition duration-600 cursor-pointer">
                 <div className="relative overflow-hidden">
                   <img
                     src={course?.thumbnail.map((url) => url.url)}
@@ -57,10 +57,10 @@ const CourseCard = () => {
                   </span>
                 </div>
 
-                <div className="bg-white px-4 py-3 h-auto">
-                  {/* <p className="bg-green-50 inline p-2 rounded-md text-green-600 font-semibold">
-                  Beginner
-                </p> */}
+                <div className=" h-[250px] px-4 py-3">
+                  <p className="bg-green-50 inline p-2 rounded-md text-green-600 font-semibold">
+                    {course["courseLevel"]}
+                  </p>
                   <h1 className="text-xl text-slate-700 font-bold my-3 hover:text-green-300  transition duration-200">
                     {course["title"]}
                   </h1>
@@ -84,7 +84,7 @@ const CourseCard = () => {
           ))}
         </div>
         <div className="py-10 text-center">
-          <Link>
+          <Link to="/all-courses">
             <button className="btn bg-[#1ab79d] md:text-lg text-white border-none px-8">
               Browse more courses <IoMdArrowRoundForward />
             </button>

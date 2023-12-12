@@ -60,11 +60,7 @@ const CourseDetails = () => {
           <section className="md:order-last order-first">
             <div className="rounded border border-gray-100 drop-shadow-md bg-white md:m-0 m-[-35px] mt-10 ">
               <div className="">
-                <img
-                  className="w-[650px]"
-                  src="https://cdn.10minuteschool.com/lg/images/thumbnails/skills/english-grammar-crash-course-course-thumbnail-by-sakib-bin-rashid-16x9.jpg"
-                  alt=""
-                />
+                <img src={item?.thumbnail.map((url) => url.url)} alt="" className="w-[650px]" />
 
                 <h1 className="text-3xl text-gray-900 font-bold mt-5 mb-5 mx-4">${item.price}</h1>
 
