@@ -18,8 +18,6 @@ const CourseCard = () => {
     })();
   }, []);
 
-  console.log(courses);
-
   const star = 5;
   const stars = Array.from({ length: 7 }, (_, index) => {
     const halfNumber = index + 0.5;
@@ -38,6 +36,7 @@ const CourseCard = () => {
   });
   if (courses?.length > 0) {
     return (
+<<<<<<< HEAD
       <div className="section bg-[#f5f1eb] md:px-32 px-12 py-9">
         <div className="text-center py-16">
           <p className="font-bold">POPULAR COURSES</p>
@@ -47,6 +46,15 @@ const CourseCard = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-7">
+=======
+      <div className="section md:px-32 px-12 py-9">
+        <div className="text-center py-16">
+          <p className="font-bold">POPULAR COURSES</p>
+          <h1 className="text-xl md:text-7xl text-black font-bold">Pick A Course To Get Started</h1>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-7 ">
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
           {courses.map((course) => (
             <Link key={course["_id"]} to={`/course-details/${course["_id"]}`}>
               <section className="hover:shadow-xl transition duration-600 cursor-pointer">

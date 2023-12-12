@@ -18,7 +18,10 @@ const App = () => {
         <Route path="/registration" element={<RegistrationPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
+<<<<<<< HEAD
         <Route path="/course-details/:id" element={<CourseDetailsPage />} />
+=======
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
         <Route path="/my-courses" element={<LessonModulePage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route
@@ -27,6 +30,11 @@ const App = () => {
         />
         <Route path="/blog-details" element={<BlogDetailsPage />} />
         <Route path="*" element={<NotFound />} />
+<<<<<<< HEAD
+=======
+        <Route path="/course-details/:id" element={<CourseDetailsPage />} />
+        <Route path="/course-by-category/:id" element={<CategoryCoursePage />} />
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
         <Route path="/blog-details" element={<BlogDetailsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

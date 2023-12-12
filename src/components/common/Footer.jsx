@@ -3,7 +3,7 @@ import logo from "./../../assets/Frame.svg";
 
 const Footer = () => {
   return (
-    <footer className="w-full text-black bg-slate-50 body-font">
+    <footer className="w-full text-black bg-white body-font">
       <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
         <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
           <a className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">

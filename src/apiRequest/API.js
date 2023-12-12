@@ -72,10 +72,17 @@ export const GET_MODULE_LESSON_API_REQUEST = async () => {
   }
 };
 
+<<<<<<< HEAD
 // ::::::::: API: all-notificaiton :::::::::
 export const GET_ALL_NOTIFICATION_REQUEST = async (categoryID) => {
   try {
     const { data } = await axios.get(`${BASE_URL}/get-all-notification`);
+=======
+// ::::::::: API: course by category :::::::::
+export const COURSE_BY_CATEGORY_API_REQUEST = async (categoryID) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/course-by-category/${categoryID}`);
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
     if (data.success) {
       return data.data;
     }
@@ -84,12 +91,33 @@ export const GET_ALL_NOTIFICATION_REQUEST = async (categoryID) => {
     return [];
   }
 };
+<<<<<<< HEAD
 // ::::::::: API: COURSE_BY_CATEGORY_REQUEST :::::::::
 export const COURSE_BY_CATEGORY_REQUEST = async (categoryID) => {
   try {
     const { data } = await axios.get(
       `${BASE_URL}/course-by-category/${categoryID}`
     );
+=======
+
+// ::::::::: API: course by category :::::::::
+export const COURSE_DETAILS_API_REQUEST = async (courseId) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/course-details/${courseId}`);
+    if (data.success) {
+      return data.data;
+    }
+    return data;
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: all-notification :::::::::
+export const GET_ALL_NOTIFICATION_REQUEST = async () => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/get-all-notification`);
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
     if (data.success) {
       return data.data;
     }

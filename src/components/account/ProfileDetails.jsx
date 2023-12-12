@@ -1,10 +1,13 @@
 import { useState } from "react";
-import { IoMdCheckmark } from "react-icons/io";
-import { LuImagePlus } from "react-icons/lu";
-import { TbPasswordFingerprint } from "react-icons/tb";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import Notification from "./Notification";
 import Calender from "./Calender";
+=======
+import MyCourse from "./MyCourse";
+import Notification from "./Notification";
+import ProfileEdit from "./ProfileEdit";
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
 
 const ProfileDetails = () => {
   const [activeTab, setActiveTab] = useState("Ebad");
@@ -14,8 +17,13 @@ const ProfileDetails = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="py-20 bg-[#f8f8fa]">
       <div className=" py-3 rounded flex justify-center gap-5 ">
+=======
+    <div className="py-24 bg-[#f8f8fa]">
+      <div className="rounded flex justify-center gap-2 ">
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
         <Link
           to=""
           className={`shrink-0 border-b-2 ${
@@ -24,8 +32,12 @@ const ProfileDetails = () => {
             activeTab === "Ebad" ? "text-gray-900" : "text-gray-500"
           }`}
           style={{ fontFamily: "Poppins" }}
+<<<<<<< HEAD
           onClick={() => handleTabClick("Ebad")}
         >
+=======
+          onClick={() => handleTabClick("Ebad")}>
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
           My Courses
         </Link>
 
@@ -37,8 +49,12 @@ const ProfileDetails = () => {
             activeTab === "Ebad 2" ? "text-gray-900" : "text-gray-500"
           }`}
           style={{ fontFamily: "Poppins" }}
+<<<<<<< HEAD
           onClick={() => handleTabClick("Ebad 2")}
         >
+=======
+          onClick={() => handleTabClick("Ebad 2")}>
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
           My Profile
         </Link>
         <Link
@@ -49,15 +65,20 @@ const ProfileDetails = () => {
             activeTab === "tab-3" ? "text-gray-900" : "text-gray-500"
           }`}
           style={{ fontFamily: "Poppins" }}
+<<<<<<< HEAD
           onClick={() => handleTabClick("tab-3")}
         >
+=======
+          onClick={() => handleTabClick("tab-3")}>
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
           Notification
         </Link>
       </div>
 
       <div
-        className={`border rounded p-1 shadow-lg h-[100%] w-[76%] mt-10 mx-auto max-w-screen-2xl gap-10 px-12 py-10  ${
+        className={`border border-green-400 rounded p-1 shadow-lg h-[100%] w-[76%]  mx-auto max-w-screen-2xl gap-10 px-12 py-10  ${
           activeTab === "Ebad" ? "block" : "hidden"
+<<<<<<< HEAD
         }`}
       >
         <div className="text-3xl font-bold tracking-widest text-blueGray-600">
@@ -88,11 +109,16 @@ const ProfileDetails = () => {
             </div>
           </div>
         </div>
+=======
+        }`}>
+        <MyCourse />
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
       </div>
 
       <div
-        className={`mx-auto max-w-screen-2xl gap-10 px-12 py-2 grid md:grid-cols-2 grid-cols-1 ${
+        className={`mx-auto max-w-screen-2xl gap-10 px-12 py-2 ${
           activeTab === "Ebad 2" ? "block" : "hidden"
+<<<<<<< HEAD
         }`}
       >
         <section className=" rounded p-4 shadow-lg h-[100%] w-full mt-10 bg-white">
@@ -257,6 +283,14 @@ const ProfileDetails = () => {
             />
           </div>
         </section>
+=======
+        }`}>
+        <ProfileEdit />
+      </div>
+
+      <div className={` rounded md:mx-32 mx-10  ${activeTab === "tab-3" ? "block" : "hidden"}`}>
+        <Notification />
+>>>>>>> 496d4a004a448e961d9352bcda99dd3d5004568e
       </div>
 
       <div
