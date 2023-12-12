@@ -4,6 +4,7 @@ import { LuImagePlus } from "react-icons/lu";
 import { TbPasswordFingerprint } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import Notification from "./Notification";
+import Calender from "./Calender";
 
 const ProfileDetails = () => {
   const [activeTab, setActiveTab] = useState("Ebad");
@@ -259,11 +260,12 @@ const ProfileDetails = () => {
       </div>
 
       <div
-        className={` rounded md:mx-32 mx-10  ${
+        className={` rounded md:mx-32 mx-10${
           activeTab === "tab-3" ? "block" : "hidden"
         }`}
       >
         <Notification />
+        <Calender />
       </div>
     </div>
   );
