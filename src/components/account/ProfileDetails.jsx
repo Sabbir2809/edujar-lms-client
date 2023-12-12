@@ -1,11 +1,8 @@
 import { useState } from "react";
-import { IoMdCheckmark } from "react-icons/io";
-import { LuImagePlus } from "react-icons/lu";
-import { TbPasswordFingerprint } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import MyCourse from "./MyCourse";
 import Notification from "./Notification";
 import ProfileEdit from "./ProfileEdit";
-import MyCourse from "./MyCourse";
 
 const ProfileDetails = () => {
     const [activeTab, setActiveTab] = useState("Ebad");
@@ -15,8 +12,8 @@ const ProfileDetails = () => {
     };
 
     return (
-        <div className="py-20 bg-[#f8f8fa]">
-            <div className=" py-3 rounded flex justify-center gap-5 ">
+        <div className="py-24 bg-[#f8f8fa]">
+            <div className="rounded flex justify-center gap-2 ">
                 <Link
                     to=""
                     className={`shrink-0 border-b-2 ${
@@ -54,14 +51,14 @@ const ProfileDetails = () => {
             </div>
 
             <div
-                className={`border rounded p-1 shadow-lg h-[100%] w-[76%] mt-10 mx-auto max-w-screen-2xl gap-10 px-12 py-10  ${
+                className={`border border-green-400 rounded p-1 shadow-lg h-[100%] w-[76%]  mx-auto max-w-screen-2xl gap-10 px-12 py-10  ${
                     activeTab === "Ebad" ? "block" : "hidden"
                 }`}>
                 <MyCourse />
             </div>
 
             <div
-                className={`mx-auto max-w-screen-2xl gap-10 px-12 py-2 mt-10  ${
+                className={`mx-auto max-w-screen-2xl gap-10 px-12 py-2 ${
                     activeTab === "Ebad 2" ? "block" : "hidden"
                 }`}>
                 <ProfileEdit />

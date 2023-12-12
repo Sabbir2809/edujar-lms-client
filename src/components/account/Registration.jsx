@@ -40,7 +40,7 @@ const Registration = () => {
   };
 
   return (
-    <div className="w-screen h-[100vh] bg-white flex items-center justify-center px-5 py-5 mt-10">
+    <div className="w-screen h-[100vh] bg-[#F5F2EB] flex items-center justify-center px-5 py-5 mt-10">
       <div
         className="bg-slate-200 text-black rounded-3xl shadow-xl w-full overflow-hidden"
         style={{ maxWidth: "1000px" }}>
