@@ -26,7 +26,6 @@ const App = () => {
           path="/course-by-category/:id"
           element={<CategoryCoursePage />}
         />
-        <Route path="/blog-details" element={<BlogDetailsPage />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/course-details/:id" element={<CourseDetailsPage />} />
         <Route
