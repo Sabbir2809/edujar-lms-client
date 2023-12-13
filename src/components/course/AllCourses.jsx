@@ -1,7 +1,8 @@
-import CourseList from "./CourseList";
-import MainLayout from "../../layout/MainLayout";
-import { ALL_COURSE_API_REQUEST } from "../../apiRequest/API";
 import { useEffect, useState } from "react";
+import { ALL_COURSE_API_REQUEST } from "../../apiRequest/API";
+import MainLayout from "../../layout/MainLayout";
+import CourseList from "./CourseList";
+
 const AllCourses = () => {
   const [course, setCourse] = useState([]);
 
@@ -14,14 +15,7 @@ const AllCourses = () => {
 
   return (
     <MainLayout>
-      <div className="grid">
-        <div className="w-32">
-          <h1>kjfgfkjhn</h1>
-        </div>
-        <div className="">
-          <CourseList course={course} />
-        </div>
-      </div>
+      <CourseList course={course} />
     </MainLayout>
   );
 };

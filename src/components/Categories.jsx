@@ -32,6 +32,11 @@ const Categories = () => {
                   className="bg-green-500 text-slate-50 p-4 rounded"
                   size={60}
                 />
+                {/* <img
+                  src={category?.categoryImg.map((url) => url.url)}
+                  alt=""
+                  className="w-100 hover:scale-110 transition duration-500"
+                /> */}
               </Card.Container>
               <Card.Container className="text-center">
                 <Card.Title>{category.categoryName}</Card.Title>

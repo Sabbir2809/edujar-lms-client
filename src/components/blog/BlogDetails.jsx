@@ -1,43 +1,40 @@
-import { Button, Textarea } from "keep-react";
-import image from "../../assets/about-banner.jpg";
+import { Textarea } from "keep-react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { BLOG_DETAILS_API_REQUEST } from "../../apiRequest/API";
 import BlogSidebar from "./BlogSidebar";
 
 const BlogDetails = () => {
+  const [blogs, setBlogs] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    (async () => {
+      const result = await BLOG_DETAILS_API_REQUEST(id);
+      setBlogs(result);
+    })();
+  }, []);
+
   return (
     <div className="pt-20 px-5 md:px-32 bg-[#f8f8fa]">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         <div className="col-span-2">
           <div className="p-5 bg-white rounded-md">
-            <h1 className="text-4xl text-black pb-3">
-              how to hide a div and when hover then show div content tailwind
-              CSS reac
-            </h1>
+            <h1 className="text-4xl text-black pb-3">{blogs.title}</h1>
             <div className="flex gap-3 pb-3">
-              <img src={image} alt="" className="rounded-full w-5" />
-              <span>Date</span>
+              <img src={blogs.thumbnail} alt="" className="rounded-full w-5" />
+              <span>{blogs.createdAt}</span>
               <span>Comments</span>
               <span>Reading time</span>
             </div>
-            <img src={image} alt="" className="w-full pb-3" />
-            <p>
-              how to hide a div and when hover then show div content tailwind
-              CSS reac how to hide a div and when hover then show div content
-              tailwind CSS reac how to hide a div and when hover then show div
-              content tailwind CSS reac
-            </p>
-            <br />
-            <p>
-              how to hide a div and when hover then show div content tailwind
-              CSS reac how to hide a div and when hover then show div content
-              tailwind CSS reac how to hide a div and when hover then show div
-              content tailwind CSS reac
-            </p>
+            <img src={blogs.thumbnail} alt="" className="w-full pb-3" />
+            <p>{blogs.description}</p>
           </div>
           {/* author */}
-          <div className="grid grid-cols-3 my-5 bg-white p-5 gap-5 rounded-md">
-            <img src={image} alt="" />
+          {/* <div className="grid grid-cols-3 my-5 bg-white p-5 gap-5 rounded-md">
+            <img src={blogs.thumbnail} alt="" />
             <div className="col-span-2">
-              <h1 className="text-black text-xl">Rasel Kibria</h1>
+              <h1 className="text-black text-xl">{blogs.author}</h1>
               <p className="pb-5 text-black ">
                 how to hide a div and when hover then show div content tailwind
               </p>
@@ -45,7 +42,7 @@ const BlogDetails = () => {
                 View All Posts
               </Button>
             </div>
-          </div>
+          </div> */}
           {/* comments */}
           <div className=" my-5 bg-white p-5 rounded-md">
             <h1>Write a Comment</h1>

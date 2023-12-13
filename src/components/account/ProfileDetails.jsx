@@ -76,15 +76,6 @@ const ProfileDetails = () => {
       >
         <Notification />
       </div>
-
-      <div
-        className={` rounded md:mx-32 mx-10${
-          activeTab === "tab-3" ? "block" : "hidden"
-        }`}
-      >
-        <Notification />
-        <Calender />
-      </div>
     </div>
   );
 };
