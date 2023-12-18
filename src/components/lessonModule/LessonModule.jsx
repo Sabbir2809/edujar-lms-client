@@ -56,9 +56,9 @@ const LessonModule = () => {
           <source src={selectVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="grid md:grid-cols-2 gap-5 mt-10">
-          <button className="btn  bg-slate-100">Previous</button>
-          <button onClick={nextHandaler} className="btn bg-slate-100">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-5 mt-10">
+          <button className="btn btn-sm  bg-slate-150">Previous</button>
+          <button onClick={nextHandaler} className="btn btn-sm bg-slate-150">
             Next
           </button>
         </div>

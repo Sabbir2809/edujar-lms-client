@@ -62,7 +62,7 @@ const ProfileDetails = () => {
       </div>
 
       <div
-        className={`mx-auto max-w-screen-2xl gap-10 px-12 py-2 ${
+        className={`mx-auto gap-10 px-12 py-2 ${
           activeTab === "Ebad 2" ? "block" : "hidden"
         }`}
       >
