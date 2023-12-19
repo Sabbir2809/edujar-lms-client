@@ -20,7 +20,7 @@ const ProfileDetails = () => {
                         <p className='text-center text-blueGray-900 font-semibold text-[13px] mt-4'>Image must be 150*150 px</p>
 
                         <div className=''>
-                            <button  className='w-full p-3 rounded bg-blueGray-700 text-white mt-5 text-center flex justify-center items-center gap-2 hover:bg-blueGray-900 font-semibold'>Upload Image Here <LuImagePlus /> </button>
+                            <button  className='w-full p-3 rounded bg-success text-white mt-5 text-center flex justify-center items-center gap-2 font-semibold'>Upload Image Here <LuImagePlus /> </button>
                         </div>
 
                         <div className='mt-11 h-full'>

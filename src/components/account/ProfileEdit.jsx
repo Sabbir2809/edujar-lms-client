@@ -23,7 +23,7 @@ const ProfileEdit = () => {
 
                     <div className="">
                         <button
-                            className="w-full p-3 rounded bg-blueGray-700 text-white mt-5 text-center flex justify-center items-center gap-2 hover:bg-blueGray-900 font-semibold"
+                            className="w-full p-3 rounded bg-success text-white mt-5 text-center flex justify-center items-center gap-2 hover:bg-green-500 font-semibold"
                             style={{ fontFamily: "Saira" }}>
                             Upload Image Here <LuImagePlus />{" "}
                         </button>
@@ -96,7 +96,7 @@ const ProfileEdit = () => {
 
                         <div className=" items-center justify-center flex col-span-2 ">
                             <button
-                                className="p-3 rounded bg-blueGray-700 text-white mt-5 text-center flex justify-center items-center gap-2 hover:bg-blueGray-900 font-semibold"
+                                className="p-3 rounded bg-success text-white mt-5 text-center flex justify-center items-center gap-2 hover:bg-green-500 font-semibold"
                                 style={{ fontFamily: "Saira" }}>
                                 Save Changes <IoMdCheckmark />{" "}
                             </button>
