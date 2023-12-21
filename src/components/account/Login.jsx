@@ -33,6 +33,7 @@ const Login = () => {
       setIsLoading(true);
       const res = await LOGIN_API(email, password);
       setIsLoading(false);
+
       if (res) {
         window.location.href = "/";
       }

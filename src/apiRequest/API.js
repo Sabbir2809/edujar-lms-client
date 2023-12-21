@@ -2,7 +2,7 @@ import axios from "axios";
 import { ErrorToast, SuccessToast } from "../utility/FormHelper";
 import { getToken, setToken } from "../utility/SessionHelper";
 
-const BASE_URL = `https://edujar-lms-server.onrender.com/api/v1`;
+const BASE_URL = `http://localhost:8000/api/v1`;
 // const BASE_URL = `http://localhost:8000/api/v1`;
 const Headers = { headers: { token: getToken() } };
 
@@ -25,6 +25,7 @@ export const LOGIN_API = async (email, password) => {
   try {
     const postBody = { email, password };
     const { data } = await axios.post(`${BASE_URL}/login`, postBody);
+
     if (data.success) {
       // set email, token in localStorage
       setToken(data.token);
@@ -158,6 +159,18 @@ export const USER_PROFILE_UPDATE_API_REQUEST = async (formData) => {
 export const GET_USER_PROFILE_DETAILS_API_REQUEST = async () => {
   try {
     const { data } = await axios.get(`${BASE_URL}/user-profile-details`, Headers);
+    if (data.success) {
+      return data.data;
+    }
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: Get user details :::::::::
+export const GET_ENROLL_COURSE_API_REQUEST = async () => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/get-enroll-course`, Headers);
     if (data.success) {
       return data.data;
     }
