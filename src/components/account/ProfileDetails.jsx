@@ -12,12 +12,12 @@ const ProfileDetails = () => {
   };
 
   return (
-    <div className="py-10 bg-[#f8f8fa]">
-      <div className="rounded flex justify-center gap-2 ">
+    <div className="py-24 bg-[#f8f8fa]">
+      <div className="rounded flex justify-center gap-2">
         <Link
           to=""
           className={`shrink-0 border-b-2 ${
-            activeTab === "false" ? "border-green-500" : "border-none"
+            activeTab === "false" ? "border-green-500 " : "border-none"
           } px-5 pb-2 text-lg font-semi-bold tracking-wide ${
             activeTab === "false" ? "text-gray-900" : "text-gray-500"
           }`}

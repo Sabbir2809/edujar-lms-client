@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { COURSE_DETAILS_API_REQUEST } from "../../apiRequest/API";
 import Loading from "../common/Loader";
 import AccordionComponent from "./Accordion";
 
 const CourseDetails = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [courseInfo, setCourseInfo] = useState([]);
 
@@ -15,7 +16,9 @@ const CourseDetails = () => {
     })();
   }, [id]);
 
-  console.log(courseInfo);
+  const handleEnrollCourse = () => {
+    navigate("/enroll-success");
+  };
 
   return (
     <>
@@ -78,15 +81,17 @@ const CourseDetails = () => {
                     <h1 className="text-3xl text-gray-900 font-bold mt-5 mb-5 mx-4">${item.price}</h1>
 
                     <div className="mx-5 mb-5">
-                      <button className="btn bg-green-300 border-none text-white text-bold text-lg w-full">
+                      <button
+                        onClick={handleEnrollCourse}
+                        className="btn bg-green-300 border-none text-white text-bold text-lg w-full">
                         Enroll Now
                       </button>
                     </div>
 
                     <div className="mx-10 mb-8 mt-7 text-[15px] text-gray-800">
                       <ul className="list-disc">
-                        <li className="my-2">কোর্সটি করছেন ১৭৫৮৯ জন</li>
-                        <li className="my-2">সময়সীমা ৬ মাস</li>
+                        {/* <li className="my-2">কোর্সটি করছেন ১৭৫৮৯ জন</li>
+                        <li className="my-2">সময়সীমা ৬ মাস</li> */}
                       </ul>
                     </div>
                   </div>
