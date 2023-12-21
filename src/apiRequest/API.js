@@ -1,9 +1,9 @@
 import axios from "axios";
 import { ErrorToast, SuccessToast } from "../utility/FormHelper";
-import { getToken, setToken } from "../utility/SessionHelper";
+import { getToken, setToken, setUserDetails } from "../utility/SessionHelper";
 
-const BASE_URL = `https://edujar-lms-server.onrender.com/api/v1`;
-// const BASE_URL = `http://localhost:8000/api/v1`;
+// const BASE_URL = `https://edujar-lms-server.onrender.com/api/v1`;
+const BASE_URL = `http://localhost:8000/api/v1`;
 const Headers = { headers: { token: getToken() } };
 
 // ::::::::: API: REGISTRATION API :::::::::
@@ -133,6 +133,43 @@ export const BLOG_DETAILS_API_REQUEST = async (id) => {
       return data.data;
     }
     return data;
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: user profile update :::::::::
+export const USER_PROFILE_UPDATE_API_REQUEST = async (formData) => {
+  try {
+    const { data } = await axios.post(
+      `${BASE_URL}/user-profile-update`,
+      formData,
+      Headers
+    );
+    if (data.success) {
+      SuccessToast(data.message);
+      return data.data;
+    }
+    return data;
+  } catch (error) {
+    if (error.response && error.response.status === 401) {
+      console.error("Unauthorized access. Please log in.");
+    } else {
+      console.error("An error occurred:", error.message);
+    }
+  }
+};
+
+// ::::::::: API: Get user details :::::::::
+export const GET_USER_PROFILE_DETAILS_API_REQUEST = async () => {
+  try {
+    const { data } = await axios.get(
+      `${BASE_URL}/user-profile-details`,
+      Headers
+    );
+    if (data.success) {
+      return data.data;
+    }
   } catch (error) {
     return [];
   }
