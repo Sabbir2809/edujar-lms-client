@@ -1,11 +1,9 @@
-import { Upload } from "keep-react";
 import { IoMdCheckmark } from "react-icons/io";
 import { useState, useEffect } from "react";
 import {
   GET_USER_PROFILE_DETAILS_API_REQUEST,
   USER_PROFILE_UPDATE_API_REQUEST,
 } from "../../apiRequest/API";
-import { SuccessToast } from "../../utility/FormHelper";
 
 const ProfileEdit = () => {
   const [data, setData] = useState([]); //get user profile data
