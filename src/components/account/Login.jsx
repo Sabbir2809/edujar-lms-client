@@ -33,13 +33,14 @@ const Login = () => {
       setIsLoading(true);
       const res = await LOGIN_API(email, password);
       setIsLoading(false);
+
       if (res) {
         window.location.href = "/";
       }
     }
   };
   return (
-    <div className="w-screen h-[100vh] bg-[#F5F2EB] flex items-center justify-center px-5 py-5 mt-10">
+    <div className="w-screen h-[100vh] bg-[#F5F2EB] flex items-center justify-center ">
       {isLoading ? (
         <Loading />
       ) : (

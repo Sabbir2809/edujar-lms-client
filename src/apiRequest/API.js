@@ -25,6 +25,7 @@ export const LOGIN_API = async (email, password) => {
   try {
     const postBody = { email, password };
     const { data } = await axios.post(`${BASE_URL}/login`, postBody);
+
     if (data.success) {
       // set email, token in localStorage
       setToken(data.token);
@@ -141,11 +142,15 @@ export const BLOG_DETAILS_API_REQUEST = async (id) => {
 // ::::::::: API: user profile update :::::::::
 export const USER_PROFILE_UPDATE_API_REQUEST = async (formData) => {
   try {
+<<<<<<< HEAD
     const { data } = await axios.post(
       `${BASE_URL}/user-profile-update`,
       formData,
       Headers
     );
+=======
+    const { data } = await axios.post(`${BASE_URL}/user-profile-update`, formData, Headers);
+>>>>>>> 647cbf9d778957b13b7934891ab2a986fc169f21
     if (data.success) {
       SuccessToast(data.message);
       return data.data;
@@ -163,10 +168,26 @@ export const USER_PROFILE_UPDATE_API_REQUEST = async (formData) => {
 // ::::::::: API: Get user details :::::::::
 export const GET_USER_PROFILE_DETAILS_API_REQUEST = async () => {
   try {
+<<<<<<< HEAD
     const { data } = await axios.get(
       `${BASE_URL}/user-profile-details`,
       Headers
     );
+=======
+    const { data } = await axios.get(`${BASE_URL}/user-profile-details`, Headers);
+    if (data.success) {
+      return data.data;
+    }
+  } catch (error) {
+    return [];
+  }
+};
+
+// ::::::::: API: Get user details :::::::::
+export const GET_ENROLL_COURSE_API_REQUEST = async () => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/get-enroll-course`, Headers);
+>>>>>>> 647cbf9d778957b13b7934891ab2a986fc169f21
     if (data.success) {
       return data.data;
     }

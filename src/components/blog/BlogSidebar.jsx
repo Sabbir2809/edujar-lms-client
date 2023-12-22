@@ -1,15 +1,31 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { GET_ALL_BLOGS_API_REQUEST } from "../../apiRequest/API";
 import { useEffect, useState } from "react";
 const BlogSidebar = () => {
   const [blogs, setBlogs] = useState([]);
+=======
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { GET_ALL_BLOGS_API_REQUEST } from "../../apiRequest/API";
+
+const BlogSidebar = () => {
+  const [blogs, setBlogs] = useState([]);
+
+>>>>>>> 647cbf9d778957b13b7934891ab2a986fc169f21
   useEffect(() => {
     (async () => {
       const result = await GET_ALL_BLOGS_API_REQUEST();
       setBlogs(result);
+<<<<<<< HEAD
       setId(result);
     })();
   }, []);
+=======
+    })();
+  }, []);
+
+>>>>>>> 647cbf9d778957b13b7934891ab2a986fc169f21
   return (
     <div>
       {blogs.map((blog) => (
